@@ -383,7 +383,7 @@ const PrivacyPolicy = () => {
 
                 /* ==================== HERO SECTION ==================== */
                 .privacy-hero {
-                    background: linear-gradient(160deg, #0f2a1a 0%, #1a4d2a 30%, #1e5631 60%, #0f2a1a 100%);
+                    background: #0f2a1a;
                     color: white;
                     padding: 140px 0 100px;
                     position: relative;
@@ -395,9 +395,7 @@ const PrivacyPolicy = () => {
                     content: '';
                     position: absolute;
                     inset: 0;
-                    background:
-                        radial-gradient(ellipse 70% 50% at 15% 80%, rgba(164, 222, 2, 0.06) 0%, transparent 60%),
-                        radial-gradient(ellipse 50% 40% at 85% 20%, rgba(164, 222, 2, 0.04) 0%, transparent 50%);
+                    background: url('https://www.roadak-consult.com/wp-content/uploads/2024/02/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9-1.png') center / cover no-repeat;
                     z-index: 0;
                 }
 
@@ -405,9 +403,8 @@ const PrivacyPolicy = () => {
                     content: '';
                     position: absolute;
                     inset: 0;
-                    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M60 12c-8 0-15 4-20 10l-15 8c-3 2-5 5-5 9v15c0 18 12 35 28 40 4 1 8 1 12 0 16-5 28-22 28-40V39c0-4-2-7-5-9L68 22c-5-6-12-10-20-10z'/%3E%3Cpath d='M60 20c-5 0-10 3-13 7l-10 5c-2 1-3 3-3 6v10c0 12 8 23 18 27 3 1 6 1 8 0 10-4 18-15 18-27V38c0-3-1-5-3-6l-10-5c-3-4-8-7-13-7z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-                    background-size: 140px 140px;
-                    z-index: 0;
+                    background: linear-gradient(135deg, rgba(15, 42, 26, 0.92) 0%, rgba(30, 86, 49, 0.85) 50%, rgba(15, 42, 26, 0.92) 100%);
+                    z-index: 1;
                 }
 
                 .hero-content {
