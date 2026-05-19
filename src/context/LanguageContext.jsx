@@ -1066,7 +1066,7 @@ privacy: {
         phoneTitle: "الهاتف",
         phone: "00962781058132",
         emailTitle: "البريد الإلكتروني",
-        email: "info@ahlanpickum.com"
+        email: "info@pickum.jo"
       },
 
       consent: {
