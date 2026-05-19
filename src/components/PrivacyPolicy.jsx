@@ -40,38 +40,7 @@ const PrivacyPolicy = () => {
     return (
         <div className="privacy-policy">
             {/* Hero Section */}
-            <div className="privacy-hero">
-                <div className="container">
-                    <div className="hero-content">
-                        <div className="hero-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                            </svg>
-                            {t('privacy.lastUpdated')}
-                        </div>
-                        <h1 className="hero-title">
-                            {t('privacy.title')}
-                        </h1>
-                        <p className="hero-description">
-                            {t('privacy.subtitle')}
-                        </p>
-                        <div className="hero-meta">
-                            <div className="meta-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
-                                <span>{t('privacy.consent.title')}</span>
-                            </div>
-                            <div className="meta-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                                </svg>
-                                <span>{t('privacy.tableOfContents')}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div className="privacy-hero"></div>
 
             {/* Main Content */}
             <div className="privacy-container">
@@ -383,103 +352,12 @@ const PrivacyPolicy = () => {
 
                 /* ==================== HERO SECTION ==================== */
                 .privacy-hero {
-                    background: #0f2a1a;
-                    color: white;
-                    padding: 140px 0 100px;
-                    position: relative;
-                    overflow: hidden;
-                    isolation: isolate;
-                }
-
-                .privacy-hero::before {
-                    content: '';
-                    position: absolute;
-                    inset: 0;
+                    height: 400px;
                     background: url('https://www.roadak-consult.com/wp-content/uploads/2024/02/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9-1.png') center / cover no-repeat;
-                    z-index: 0;
-                }
-
-                .privacy-hero::after {
-                    content: '';
-                    position: absolute;
-                    inset: 0;
-                    background: linear-gradient(135deg, rgba(15, 42, 26, 0.92) 0%, rgba(30, 86, 49, 0.85) 50%, rgba(15, 42, 26, 0.92) 100%);
-                    z-index: 1;
-                }
-
-                .hero-content {
                     position: relative;
-                    z-index: 2;
-                    text-align: center;
-                    max-width: 750px;
-                    margin: 0 auto;
                 }
 
-                .privacy-hero .container {
-                    position: relative;
-                    z-index: 1;
-                }
 
-                .hero-badge {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 8px;
-                    background: rgba(255, 255, 255, 0.08);
-                    backdrop-filter: blur(10px);
-                    border: 1px solid rgba(255, 255, 255, 0.15);
-                    padding: 8px 20px;
-                    border-radius: 50px;
-                    font-size: 0.82rem;
-                    font-weight: 500;
-                    color: rgba(255, 255, 255, 0.8);
-                    margin-bottom: 24px;
-                    letter-spacing: 0.3px;
-                }
-
-                .hero-badge svg {
-                    width: 14px;
-                    height: 14px;
-                    color: rgba(255, 255, 255, 0.6);
-                }
-
-                .hero-title {
-                    font-size: 3rem;
-                    font-weight: 800;
-                    margin-bottom: 18px;
-                    line-height: 1.15;
-                    letter-spacing: -0.3px;
-                }
-
-                .hero-description {
-                    font-size: 1.1rem;
-                    opacity: 0.8;
-                    margin-bottom: 32px;
-                    line-height: 1.7;
-                    max-width: 600px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-
-                .hero-meta {
-                    display: flex;
-                    justify-content: center;
-                    gap: 28px;
-                    flex-wrap: wrap;
-                }
-
-                .meta-item {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    font-size: 0.88rem;
-                    color: rgba(255, 255, 255, 0.65);
-                }
-
-                .meta-item svg {
-                    width: 16px;
-                    height: 16px;
-                    color: rgba(255, 255, 255, 0.5);
-                }
 
                 /* ==================== MAIN CONTAINER ==================== */
                 .privacy-container {
