@@ -352,8 +352,8 @@ const PrivacyPolicy = () => {
 
                 /* ==================== HERO SECTION ==================== */
                 .privacy-hero {
-                    min-height: 600px;
-                    background: url('https://www.roadak-consult.com/wp-content/uploads/2024/02/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9-1.png') center / contain no-repeat;
+                    min-height: 1000px;
+                    background: url('https://www.roadak-consult.com/wp-content/uploads/2024/02/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9-1.png') center / cover no-repeat;
                     background-color: #f8fafc;
                     position: relative;
                 }
