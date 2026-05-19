@@ -41,8 +41,6 @@ const PrivacyPolicy = () => {
         <div className="privacy-policy">
             {/* Hero Section */}
             <div className="privacy-hero">
-                <div className="privacy-decoration"></div>
-                <div className="privacy-decoration"></div>
                 <div className="container">
                     <div className="hero-content">
                         <div className="hero-badge">
@@ -372,17 +370,6 @@ const PrivacyPolicy = () => {
                                 </div>
                             </section>
 
-                            {/* Consent Banner */}
-                            <div className="consent-banner">
-                                <div className="consent-content">
-                                    <h4>{t('privacy.consent.title')}</h4>
-                                    <p>{t('privacy.consent.content')}</p>
-                                </div>
-                                <div className="consent-actions">
-                                    <a href="/" className="btn btn-primary">{t('privacy.consent.accept')}</a>
-                                    <Link to="/" className="btn btn-secondary">{t('privacy.consent.learnMore')}</Link>
-                                </div>
-                            </div>
                         </main>
                     </div>
                 </div>
@@ -396,7 +383,7 @@ const PrivacyPolicy = () => {
 
                 /* ==================== HERO SECTION ==================== */
                 .privacy-hero {
-                    background: linear-gradient(135deg, #1e5631 0%, #2a7d46 50%, #1a4d2a 100%);
+                    background: linear-gradient(160deg, #0f2a1a 0%, #1a4d2a 30%, #1e5631 60%, #0f2a1a 100%);
                     color: white;
                     padding: 140px 0 100px;
                     position: relative;
@@ -409,9 +396,8 @@ const PrivacyPolicy = () => {
                     position: absolute;
                     inset: 0;
                     background:
-                        radial-gradient(ellipse 80% 60% at 20% 20%, rgba(164, 222, 2, 0.08) 0%, transparent 60%),
-                        radial-gradient(ellipse 60% 50% at 80% 80%, rgba(164, 222, 2, 0.05) 0%, transparent 50%),
-                        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+                        radial-gradient(ellipse 70% 50% at 15% 80%, rgba(164, 222, 2, 0.06) 0%, transparent 60%),
+                        radial-gradient(ellipse 50% 40% at 85% 20%, rgba(164, 222, 2, 0.04) 0%, transparent 50%);
                     z-index: 0;
                 }
 
@@ -419,8 +405,8 @@ const PrivacyPolicy = () => {
                     content: '';
                     position: absolute;
                     inset: 0;
-                    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-                    background-size: 160px 160px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M60 12c-8 0-15 4-20 10l-15 8c-3 2-5 5-5 9v15c0 18 12 35 28 40 4 1 8 1 12 0 16-5 28-22 28-40V39c0-4-2-7-5-9L68 22c-5-6-12-10-20-10z'/%3E%3Cpath d='M60 20c-5 0-10 3-13 7l-10 5c-2 1-3 3-3 6v10c0 12 8 23 18 27 3 1 6 1 8 0 10-4 18-15 18-27V38c0-3-1-5-3-6l-10-5c-3-4-8-7-13-7z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                    background-size: 140px 140px;
                     z-index: 0;
                 }
 
@@ -428,7 +414,7 @@ const PrivacyPolicy = () => {
                     position: relative;
                     z-index: 2;
                     text-align: center;
-                    max-width: 800px;
+                    max-width: 750px;
                     margin: 0 auto;
                 }
 
@@ -437,77 +423,42 @@ const PrivacyPolicy = () => {
                     z-index: 1;
                 }
 
-                .privacy-hero .container::before {
-                    content: '';
-                    position: absolute;
-                    top: -60px;
-                    left: -60px;
-                    width: 200px;
-                    height: 200px;
-                    border: 1px solid rgba(164, 222, 2, 0.1);
-                    border-radius: 50%;
-                    animation: heroOrbit 20s linear infinite;
-                }
-
-                .privacy-hero .container::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -80px;
-                    right: -40px;
-                    width: 150px;
-                    height: 150px;
-                    border: 1px solid rgba(255, 255, 255, 0.06);
-                    border-radius: 50%;
-                    animation: heroOrbit 25s linear infinite reverse;
-                }
-
-                @keyframes heroOrbit {
-                    from { transform: rotate(0deg) translateX(15px) rotate(0deg); }
-                    to { transform: rotate(360deg) translateX(15px) rotate(-360deg); }
-                }
-
                 .hero-badge {
                     display: inline-flex;
                     align-items: center;
                     gap: 8px;
-                    background: rgba(164, 222, 2, 0.15);
+                    background: rgba(255, 255, 255, 0.08);
                     backdrop-filter: blur(10px);
-                    border: 1px solid rgba(164, 222, 2, 0.25);
+                    border: 1px solid rgba(255, 255, 255, 0.15);
                     padding: 8px 20px;
                     border-radius: 50px;
-                    font-size: 0.85rem;
+                    font-size: 0.82rem;
                     font-weight: 500;
-                    color: #a4de02;
+                    color: rgba(255, 255, 255, 0.8);
                     margin-bottom: 24px;
-                    letter-spacing: 0.5px;
+                    letter-spacing: 0.3px;
                 }
 
                 .hero-badge svg {
-                    width: 16px;
-                    height: 16px;
+                    width: 14px;
+                    height: 14px;
+                    color: rgba(255, 255, 255, 0.6);
                 }
 
                 .hero-title {
-                    font-size: 3.2rem;
+                    font-size: 3rem;
                     font-weight: 800;
-                    margin-bottom: 20px;
-                    line-height: 1.1;
-                    letter-spacing: -0.5px;
-                }
-
-                .hero-title span {
-                    background: linear-gradient(135deg, #a4de02, #8bc34a);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
+                    margin-bottom: 18px;
+                    line-height: 1.15;
+                    letter-spacing: -0.3px;
                 }
 
                 .hero-description {
-                    font-size: 1.15rem;
-                    opacity: 0.85;
+                    font-size: 1.1rem;
+                    opacity: 0.8;
                     margin-bottom: 32px;
                     line-height: 1.7;
-                    max-width: 650px;
+                    max-width: 600px;
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -515,7 +466,7 @@ const PrivacyPolicy = () => {
                 .hero-meta {
                     display: flex;
                     justify-content: center;
-                    gap: 32px;
+                    gap: 28px;
                     flex-wrap: wrap;
                 }
 
@@ -523,14 +474,14 @@ const PrivacyPolicy = () => {
                     display: flex;
                     align-items: center;
                     gap: 8px;
-                    font-size: 0.9rem;
-                    color: rgba(255, 255, 255, 0.75);
+                    font-size: 0.88rem;
+                    color: rgba(255, 255, 255, 0.65);
                 }
 
                 .meta-item svg {
                     width: 16px;
                     height: 16px;
-                    color: #a4de02;
+                    color: rgba(255, 255, 255, 0.5);
                 }
 
                 /* ==================== MAIN CONTAINER ==================== */
@@ -1196,77 +1147,7 @@ const PrivacyPolicy = () => {
                     color: #1e5631;
                 }
 
-                /* ==================== CONSENT BANNER ==================== */
-                .consent-banner {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    background: linear-gradient(135deg, #1e5631, #2a7d46);
-                    border-radius: 16px;
-                    margin-top: 48px;
-                    padding: 0;
-                    overflow: hidden;
-                    box-shadow: 0 8px 32px rgba(30, 86, 49, 0.2);
-                }
 
-                .consent-content {
-                    padding: 32px 36px;
-                    flex: 1;
-                }
-
-                .consent-content h4 {
-                    font-size: 1.2rem;
-                    font-weight: 700;
-                    color: white;
-                    margin-bottom: 8px;
-                }
-
-                .consent-content p {
-                    margin: 0;
-                    color: rgba(255, 255, 255, 0.8);
-                    font-size: 0.95rem;
-                    line-height: 1.6;
-                }
-
-                .consent-actions {
-                    display: flex;
-                    gap: 10px;
-                    padding: 32px 36px;
-                    flex-shrink: 0;
-                }
-
-                .btn {
-                    padding: 12px 24px;
-                    border-radius: 10px;
-                    font-weight: 600;
-                    text-decoration: none;
-                    transition: all 0.3s ease;
-                    border: none;
-                    cursor: pointer;
-                    font-size: 0.9rem;
-                    white-space: nowrap;
-                }
-
-                .btn-primary {
-                    background: #a4de02;
-                    color: #1e5631;
-                }
-
-                .btn-primary:hover {
-                    background: #b8f004;
-                    transform: translateY(-2px);
-                    box-shadow: 0 4px 16px rgba(164, 222, 2, 0.4);
-                }
-
-                .btn-secondary {
-                    background: rgba(255, 255, 255, 0.1);
-                    color: white;
-                    border: 1.5px solid rgba(255, 255, 255, 0.25);
-                }
-
-                .btn-secondary:hover {
-                    background: rgba(255, 255, 255, 0.18);
-                }
 
                 /* ==================== SCROLLBAR ==================== */
                 .privacy-policy ::-webkit-scrollbar {
@@ -1284,36 +1165,6 @@ const PrivacyPolicy = () => {
 
                 .privacy-policy ::-webkit-scrollbar-thumb:hover {
                     background: #94a3b8;
-                }
-
-                /* ==================== FLOATING DECORATIONS ==================== */
-                .privacy-decoration {
-                    position: absolute;
-                    border-radius: 50%;
-                    pointer-events: none;
-                    opacity: 0.04;
-                    background: radial-gradient(circle, #a4de02, transparent);
-                }
-
-                .privacy-decoration:nth-child(1) {
-                    width: 400px;
-                    height: 400px;
-                    top: -100px;
-                    right: -100px;
-                    animation: floatDeco 12s ease-in-out infinite;
-                }
-
-                .privacy-decoration:nth-child(2) {
-                    width: 300px;
-                    height: 300px;
-                    bottom: -80px;
-                    left: -80px;
-                    animation: floatDeco 15s ease-in-out infinite reverse;
-                }
-
-                @keyframes floatDeco {
-                    0%, 100% { transform: translate(0, 0) scale(1); }
-                    50% { transform: translate(20px, -20px) scale(1.05); }
                 }
 
                 /* ==================== RESPONSIVE ==================== */
@@ -1370,21 +1221,6 @@ const PrivacyPolicy = () => {
 
                     .content-section h2 {
                         font-size: 1.35rem;
-                    }
-
-                    .consent-banner {
-                        flex-direction: column;
-                        text-align: center;
-                    }
-
-                    .consent-content {
-                        padding: 28px 24px 0;
-                    }
-
-                    .consent-actions {
-                        padding: 20px 24px 28px;
-                        justify-content: center;
-                        flex-wrap: wrap;
                     }
 
                     .categories-grid,
