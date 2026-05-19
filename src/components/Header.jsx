@@ -148,7 +148,7 @@ const EnhancedHeader = () => {
     const renderNavLink = (link) => {
         if (link.subLinks) {
             return (
-                <div className="dropdown-wrapper" ref={link.id === 'services' ? servicesMenuRef : null}>
+                <div className="dropdown-wrapper">
                     <button
                         className={`nav-link ${activeSection === link.id ? 'active' : ''} ${isServicesMenuOpen ? 'menu-open' : ''}`}
                         onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}

@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import PrivacyPolicy from '../components/PrivacyPolicy';
 
 // ملف الترجمات الكامل
 const translations = {

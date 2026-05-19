@@ -14,7 +14,7 @@ const TeamSection = () => {
             nameEn: "Refat Jameel Mohammad Awad",
             role: "رئيس مجلس الادارة",
             roleEn: "Chairman of the Board",
-            image: '/images/team/avatar1.jpg', 
+            image: 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 viewBox=%220 0 200 200%22%3E%3Crect fill=%22%231e5631%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23a4de02%22 font-size=%2272%22 font-family=%22Arial%22 x=%22100%22 y=%22120%22 text-anchor=%22middle%22%3ERA%3C/text%3E%3C/svg%3E',
             bio: "رئيس هيئة مديرين",
             bioEn: "Chairman of Directors",
             social: {
