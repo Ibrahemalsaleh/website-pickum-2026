@@ -265,7 +265,7 @@ const translations = {
             id: 2,
             name: " شركة الحلول المالية للدفع بالهاتف النقال ",
             nameEn: "UWallet",
-            logo: 'https://scontent.famm10-1.fna.fbcdn.net/v/t39.30808-6/564543867_1239768354857388_7677231587757014608_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=Zyj58_SxJkoQ7kNvwG2dCE2&_nc_oc=Adp8yILwJhpprLG-2k1hmN1xgfYBlZtXICt7fOjM8M4qqeUP42u8KEHinIOqYSo6z88&_nc_zt=23&_nc_ht=scontent.famm10-1.fna&_nc_gid=IfRJDwEFbbcVHkcFPrNwzQ&_nc_ss=7a389&oh=00_Afy4OzNa3F-dDnzi-WllbVm-LLuOa5jt4nihF_JxoKHPGg&oe=69CAA5EE',
+            logo: 'https://play-lh.googleusercontent.com/G9fvLE4oAxjhvF_ynshWC181s-kxP9SS_RiUgCIZxOwmKKxh3lYBVaR1QR43yUSW314q6o6uLFatFBvl1w5ZclQ',
             description: 'حلول الدفع الإلكتروني',
             category: 'دفع إلكتروني'
         },
@@ -282,7 +282,7 @@ const translations = {
             id: 5,
             name: "البنك التجاري الاردني",
             nameEn: 'Jordan Commercial Bank',
-            logo: 'https://opensooqmedia.os-cdn.com/banklogos/jordan-commercial-bank_ps.png',
+            logo: 'https://scontent.famm10-2.fna.fbcdn.net/v/t1.6435-9/128362656_2926510447451240_2428489555443017108_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=mhjekcvoVXIQ7kNvwHGtxwP&_nc_oc=AdoJlEKS-Gzjq-n8_Ada_qqOU983jTLijoPOZ4h5fIOkvZfgl-Iu2FcekgIFm9scG0w&_nc_zt=23&_nc_ht=scontent.famm10-2.fna&_nc_gid=M6pHCpJat7cbkv1C1jGdHA&_nc_ss=7a289&oh=00_Af4hqc25T_wmZ1rgLjXCvpmbYYNnKGRvjGY9e78nl-ljDg&oe=6A33765A',
             description: 'حلول الدفع الإلكتروني',
             category: 'مالي'
         },
@@ -880,7 +880,7 @@ privacy: {
       
       introduction: {
         title: "مقدمة",
-        content1: "تنطبق سياسة الخصوصية هذه على تطبيقات الهاتف المحمول 'أهلاً بيكم' (بيكم) و'النشمي' الصادرة عن شركة أهلاً بكم للنقل (بيكم). نحن ملتزمون بحماية خصوصيتك وضمان أمان معلوماتك الشخصية.",
+        content1: "تنطبق سياسة الخصوصية هذه على تطبيقين للهاتف المحمول: تطبيق 'أهلاً بيكم' (Pickum) المخصص للعملاء لطلب خدمات النقل والتوصيل، وتطبيق 'النشمي' (Nashmi) المخصص للسائقين لتلقي وإدارة الطلبات. التطبيقان صادران عن شركة أهلاً بكم للنقل (بيكم). نحن ملتزمون بحماية خصوصيتك وضمان أمان معلوماتك الشخصية.",
         content2: "تصف سياسة الخصوصية هذه كيفية جمعنا واستخدامنا ومعالجة وكشف معلوماتك، بما في ذلك المعلومات الشخصية، فيما يتعلق بالوصول إلى خدماتنا واستخدامها.",
         noteTitle: "ملاحظة هامة",
         noteContent: "باستخدام خدماتنا، فإنك توافق على جمع واستخدام المعلومات وفقاً لهذه السياسة."
@@ -895,22 +895,43 @@ privacy: {
             "الاسم، رقم الهاتف، العنوان، البريد الإلكتروني"
           ]
         },
+        driverInfo: {
+          title: "معلومات السائقين (تطبيق النشمي)",
+          items: [
+            "رخصة قيادة سارية المفعول ورقمها",
+            "معلومات المركبة (النوع، اللوحة، اللون، سنة الصنع)",
+            "نتيجة فحص الخلفية الجنائية",
+            "وثائق التأمين والتسجيل",
+            "صورة شخصية وصورة الهوية"
+          ]
+        },
         paymentInfo: {
           title: "معلومات الدفع",
           items: [
-            "تفاصيل الدفع الإلكتروني عند إجراء عمليات الشراء أو الطلب"
+            "تفاصيل الدفع الإلكتروني عند إجراء عمليات الشراء أو الطلب",
+            "رقم الحساب البنكي للمدفوعات (للسائقين)"
           ]
         },
         locationInfo: {
-          title: "معلومات الموقع",
+          title: "الموقع في الوقت الفعلي (GPS)",
           items: [
-            "لتحديد مكان الاستلام أو التسليم بدقة عبر GPS"
+            "الموقع في الوقت الفعلي لتحديد مكان الاستلام والتسليم بدقة (تطبيق بيكم)",
+            "الموقع في الخلفية (Background Location) لتتبع مسار التوصيل وتوجيه السائق حتى عند تصغير التطبيق (تطبيق النشمي)"
           ]
         },
         usageInfo: {
           title: "معلومات الاستخدام",
           items: [
-            "تفضيلات المستخدم، نوع الطلبات، وسجل العمليات داخل التطبيق"
+            "تفضيلات المستخدم، نوع الطلبات، وسجل العمليات داخل التطبيق",
+            "حالة الطلب وسجل الرحلات"
+          ]
+        },
+        devicePermissions: {
+          title: "صلاحيات الجهاز",
+          items: [
+            "الوصول إلى الرسائل النصية (SMS) لقراءة كلمة المرور لمرة واحدة (OTP) تلقائياً لتعبئة عملية تسجيل الدخول",
+            "الوصول إلى التخزين لرفع الصور والمستندات",
+            "الوصول إلى الكاميرا لتصوير المستندات والمرفقات"
           ]
         }
       },
@@ -1938,7 +1959,7 @@ privacy: {
       
       introduction: {
         title: "Introduction",
-        content1: "Welcome to Ahlan Pickum's Privacy Policy. We are committed to protecting your privacy and ensuring the security of your personal information.",
+        content1: "This Privacy Policy applies to two mobile applications: 'Ahlan Pickum' (Pickum) for customers to request transportation and delivery services, and 'Al-Nashmi' (Nashmi) for drivers to receive and manage orders. Both applications are published by Ahlan Bekum Transport (Pickum). We are committed to protecting your privacy and ensuring the security of your personal information.",
         content2: "This Privacy Policy describes how we collect, use, process, and disclose your information, including personal information, in connection with your access to and use of our services.",
         noteTitle: "Important Note",
         noteContent: "By using our services, you agree to the collection and use of information in accordance with this policy."
@@ -1953,22 +1974,43 @@ privacy: {
             "Name, phone number, address, email"
           ]
         },
+        driverInfo: {
+          title: "Driver Information (Nashmi App)",
+          items: [
+            "Valid driver's license and license number",
+            "Vehicle information (type, plate number, color, year)",
+            "Criminal background check results",
+            "Insurance and registration documents",
+            "Profile photo and ID copy"
+          ]
+        },
         paymentInfo: {
           title: "Payment Information",
           items: [
-            "Electronic payment details when making purchases or orders"
+            "Electronic payment details when making purchases or orders",
+            "Bank account details for payouts (for drivers)"
           ]
         },
         locationInfo: {
-          title: "Location Information",
+          title: "Real-Time Location (GPS)",
           items: [
-            "To accurately determine pickup or delivery location via GPS"
+            "Real-time location to accurately determine pickup and delivery locations (Pickum app)",
+            "Background location tracking to monitor delivery routes and provide driver navigation even when the app is minimized (Nashmi app)"
           ]
         },
         usageInfo: {
           title: "Usage Information",
           items: [
-            "User preferences, order types, and transaction history within the app"
+            "User preferences, order types, and transaction history within the app",
+            "Order status and trip history"
+          ]
+        },
+        devicePermissions: {
+          title: "Device Permissions",
+          items: [
+            "SMS access to automatically read one-time passwords (OTP) for login verification",
+            "Storage access to upload images and documents",
+            "Camera access to capture documents and attachments"
           ]
         }
       },

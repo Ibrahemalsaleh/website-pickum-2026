@@ -132,6 +132,26 @@ const PrivacyPolicy = () => {
                                                 ))}
                                             </ul>
                                         </div>
+
+                                        <div className="category-card">
+                                            <div className="category-icon driver"></div>
+                                            <h5>{t('privacy.personalInfo.driverInfo.title')}</h5>
+                                            <ul>
+                                                {t('privacy.personalInfo.driverInfo.items', { returnObjects: true }).map((item, index) => (
+                                                    <li key={index}>{item}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+
+                                        <div className="category-card">
+                                            <div className="category-icon device"></div>
+                                            <h5>{t('privacy.personalInfo.devicePermissions.title')}</h5>
+                                            <ul>
+                                                {t('privacy.personalInfo.devicePermissions.items', { returnObjects: true }).map((item, index) => (
+                                                    <li key={index}>{item}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -640,6 +660,14 @@ const PrivacyPolicy = () => {
 
                 .category-icon.usage {
                     background: linear-gradient(135deg, #f093fb, #f5576c);
+                }
+
+                .category-icon.driver {
+                    background: linear-gradient(135deg, #f59e0b, #d97706);
+                }
+
+                .category-icon.device {
+                    background: linear-gradient(135deg, #06b6d4, #0891b2);
                 }
 
                 .category-card h5 {
