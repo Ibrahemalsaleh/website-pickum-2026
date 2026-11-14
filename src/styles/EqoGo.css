@@ -496,6 +496,10 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.eqo-team-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .eqo-card {
     background: var(--eqo-surf);
     border: 1px solid var(--eqo-line);

@@ -204,9 +204,10 @@ export const eqoContent = {
         { initial: 'س', name: 'سلطان البغدادي', role: 'المدير التنفيذي' },
         { initial: 'ت', name: 'تامر أبو دقر', role: 'مدير العمليات' },
         { initial: 'خ', name: 'خالد', role: 'مدير الكول سنتر' },
-        { initial: 'إ', name: 'إبراهيم وائل الصالح\nسبا خريسات', role: 'قسم تكنولوجيا المعلومات' },
+        { initial: 'إ', name: 'إبراهيم وائل الصالح', role: 'قسم تكنولوجيا المعلومات' },
         { initial: 'م', name: 'منار النبتيتي', role: 'قسم التسويق الإلكتروني' },
-        { initial: 'ر', name: 'رافت عوض\nأسيل جربوع', role: 'قسم التسويق الميداني' }
+        { initial: 'ر', name: 'رافت عوض', role: 'قسم التسويق الميداني' },
+        { initial: 'أ', name: 'أسيل جربوع', role: 'قسم التسويق الميداني' }
       ]
     },
     faq: {
@@ -445,9 +446,10 @@ export const eqoContent = {
         { initial: 'S', name: 'Sultan Al-Baghdadi', role: 'Chief Executive Officer' },
         { initial: 'T', name: 'Tamer Abu Daqar', role: 'Operations Manager' },
         { initial: 'K', name: 'Khaled', role: 'Call Center Manager' },
-        { initial: 'I', name: 'Ibrahim Wael Al-Saleh\nSaba Khraisat', role: 'Information Technology' },
+        { initial: 'I', name: 'Ibrahim Wael Al-Saleh', role: 'Information Technology' },
         { initial: 'M', name: 'Manar Al-Nabtiti', role: 'Digital Marketing' },
-        { initial: 'R', name: 'Ra\u2019fat Awad\nAseel Jarbou', role: 'Field Marketing' }
+        { initial: 'R', name: 'Ra\u2019fat Awad', role: 'Field Marketing' },
+        { initial: 'A', name: 'Aseel Jarbou', role: 'Field Marketing' }
       ]
     },
     faq: {

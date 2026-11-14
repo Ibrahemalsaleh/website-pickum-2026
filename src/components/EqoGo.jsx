@@ -295,7 +295,7 @@ const EqoGo = () => {
                 <div className="eqo-wrap">
                     <h2>{c.team.title}</h2>
                     <p className="eqo-sub">{c.team.sub}</p>
-                    <div className="eqo-grid">
+                    <div className="eqo-grid eqo-team-grid">
                         {c.team.members.map((member) => (
                             <div key={member.name} className="eqo-placeholder">
                                 <span className="eqo-avatar">{member.initial}</span>
