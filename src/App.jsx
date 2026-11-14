@@ -17,6 +17,7 @@ import FAQSection from './components/FAQSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import EqoGo from './components/EqoGo';
 
 // استيراد صفحات الخدمات
 import HomeService from './components/services/HomeService';
@@ -406,6 +407,7 @@ const App = () => {
                                 <Route path="/service/pickup" element={<PickupService />} />
                                 <Route path="/service/bus" element={<BusService />} />
                                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                                <Route path="/eqo-go" element={<EqoGo />} />
                             </Routes>
                         </MainLayout>
                     </div>

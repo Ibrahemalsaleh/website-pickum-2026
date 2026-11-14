@@ -1,0 +1,865 @@
+/* ===================================
+   EQO GO — Company Profile Page
+   Uses the Ahlan Bikum brand palette
+   =================================== */
+
+.eqo-page {
+    --eqo-primary: #1e5631;
+    --eqo-primary-dark: #0f2918;
+    --eqo-primary-light: #2a7d46;
+    --eqo-secondary: #76b947;
+    --eqo-accent: #a4de02;
+    --eqo-accent-light: #c8f442;
+    --eqo-ink: #0f2918;
+    --eqo-mut: #5b7062;
+    --eqo-bg: #f7faf5;
+    --eqo-surf: #ffffff;
+    --eqo-line: #e0e9da;
+    --eqo-tint: rgba(118, 185, 71, 0.10);
+    --eqo-tint-accent: rgba(164, 222, 2, 0.14);
+
+    font-family: 'Tajawal', 'Cairo', 'Segoe UI', system-ui, sans-serif;
+    background: var(--eqo-bg);
+    color: var(--eqo-ink);
+    min-height: 100vh;
+    padding-top: 120px;
+    overflow-x: hidden;
+}
+
+.eqo-page *,
+.eqo-page *::before,
+.eqo-page *::after {
+    box-sizing: border-box;
+}
+
+.eqo-page h1,
+.eqo-page h2,
+.eqo-page h3 {
+    line-height: 1.35;
+    margin: 0;
+    font-weight: 800;
+    color: var(--eqo-ink);
+}
+
+.eqo-page p {
+    margin: 0;
+}
+
+.eqo-wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+.eqo-eyebrow {
+    display: inline-block;
+    background: var(--eqo-tint-accent);
+    color: var(--eqo-primary);
+    border: 1px solid rgba(30, 86, 49, 0.14);
+    border-radius: 999px;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* ---------- Hero ---------- */
+.eqo-hero {
+    padding: 20px 0 56px;
+}
+
+.eqo-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 44px;
+    align-items: center;
+}
+
+.eqo-hero h1 {
+    font-size: clamp(30px, 4.6vw, 50px);
+    letter-spacing: -0.5px;
+}
+
+.eqo-lead {
+    margin-top: 18px;
+    color: var(--eqo-mut);
+    font-size: 19px;
+    line-height: 1.9;
+    max-width: 36em;
+}
+
+.eqo-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.eqo-pill {
+    border: 1px solid var(--eqo-line);
+    background: var(--eqo-surf);
+    border-radius: 999px;
+    padding: 5px 15px;
+    font-size: 14px;
+    color: var(--eqo-mut);
+    font-weight: 500;
+}
+
+.eqo-btn {
+    display: inline-block;
+    margin-top: 28px;
+    background: linear-gradient(135deg, var(--eqo-primary) 0%, var(--eqo-primary-light) 100%);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 13px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(30, 86, 49, 0.22);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.eqo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(30, 86, 49, 0.3);
+    color: #fff;
+}
+
+.eqo-shot {
+    border-radius: 22px;
+    overflow: hidden;
+    background: var(--eqo-tint);
+    border: 1px solid var(--eqo-line);
+    box-shadow: 0 18px 40px rgba(15, 41, 24, 0.08);
+}
+
+.eqo-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 580px;
+    object-fit: contain;
+}
+
+/* ---------- Stats strip ---------- */
+.eqo-strip {
+    background: linear-gradient(135deg, var(--eqo-primary-dark) 0%, var(--eqo-primary) 55%, var(--eqo-primary-light) 100%);
+    color: #fff;
+}
+
+.eqo-strip-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    text-align: center;
+}
+
+.eqo-strip b {
+    display: block;
+    font-size: 34px;
+    line-height: 1.2;
+    color: var(--eqo-accent);
+}
+
+.eqo-strip small {
+    font-size: 14px;
+    opacity: 0.88;
+    line-height: 1.6;
+    display: block;
+    margin-top: 4px;
+}
+
+/* ---------- Sections ---------- */
+.eqo-section {
+    padding: 66px 0;
+}
+
+.eqo-section.eqo-alt {
+    background: var(--eqo-surf);
+    border-block: 1px solid var(--eqo-line);
+}
+
+.eqo-page h2 {
+    font-size: clamp(25px, 3.4vw, 35px);
+}
+
+.eqo-sub {
+    color: var(--eqo-mut);
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 1.9;
+    max-width: 46em;
+}
+
+.eqo-para {
+    margin-top: 16px;
+    font-size: 17px;
+    line-height: 1.95;
+    color: #24382c;
+}
+
+.eqo-subhead {
+    font-size: 23px;
+    margin: 46px 0 0;
+}
+
+.eqo-subhead + .eqo-sub {
+    margin-top: 6px;
+}
+
+/* ---------- Two column ---------- */
+.eqo-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+    align-items: center;
+}
+
+.eqo-two.eqo-flip .eqo-shot {
+    order: -1;
+}
+
+/* ---------- Values chips ---------- */
+.eqo-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.eqo-values span {
+    background: var(--eqo-tint);
+    color: var(--eqo-primary);
+    border-radius: 10px;
+    padding: 7px 17px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* ---------- Lists ---------- */
+.eqo-list {
+    list-style: none;
+    margin: 24px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 13px;
+}
+
+.eqo-list-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 38px;
+}
+
+.eqo-list li {
+    padding-inline-start: 26px;
+    position: relative;
+    font-size: 16.5px;
+    line-height: 1.8;
+    color: #24382c;
+}
+
+.eqo-list li::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0.72em;
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    background: var(--eqo-accent);
+}
+
+.eqo-list-driver li::before {
+    background: var(--eqo-secondary);
+}
+
+.eqo-list b {
+    font-weight: 800;
+    color: var(--eqo-ink);
+}
+
+.eqo-facts {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.eqo-facts li {
+    font-size: 16px;
+    line-height: 1.7;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--eqo-line);
+    color: #24382c;
+}
+
+.eqo-facts li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.eqo-facts b {
+    color: var(--eqo-primary);
+    font-weight: 800;
+}
+
+/* ---------- Vision / mission ---------- */
+.eqo-vm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.eqo-vm-box {
+    border-radius: 16px;
+    padding: 30px;
+    color: #fff;
+}
+
+.eqo-vm-vision {
+    background: linear-gradient(135deg, var(--eqo-primary) 0%, var(--eqo-primary-light) 100%);
+}
+
+.eqo-vm-mission {
+    background: linear-gradient(135deg, #2a5f1a 0%, #4a8a24 100%);
+}
+
+.eqo-vm-box h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.eqo-vm-box p {
+    font-size: 17.5px;
+    line-height: 1.9;
+}
+
+.eqo-vm-box small {
+    display: block;
+    margin-top: 14px;
+    opacity: 0.92;
+    font-size: 15.5px;
+    line-height: 1.85;
+}
+
+/* ---------- Cards grid ---------- */
+.eqo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.eqo-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.eqo-card {
+    background: var(--eqo-surf);
+    border: 1px solid var(--eqo-line);
+    border-radius: 14px;
+    padding: 20px 20px 22px;
+    box-shadow: 0 1px 2px rgba(18, 41, 74, 0.05);
+    border-top: 4px solid var(--eqo-primary);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.eqo-section.eqo-alt .eqo-card {
+    background: var(--eqo-bg);
+}
+
+.eqo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(15, 41, 24, 0.09);
+}
+
+.eqo-card h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.eqo-card p {
+    color: var(--eqo-mut);
+    font-size: 15.5px;
+    line-height: 1.8;
+}
+
+.eqo-card-primary {
+    border-top-color: var(--eqo-primary);
+}
+
+.eqo-card-accent {
+    border-top-color: var(--eqo-accent);
+}
+
+.eqo-card-dark {
+    border-top-color: var(--eqo-ink);
+}
+
+/* ---------- Tags ---------- */
+.eqo-tag {
+    display: inline-block;
+    font-size: 12.5px;
+    border-radius: 6px;
+    padding: 1px 9px;
+    margin-inline-start: 8px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+.eqo-tag-on {
+    background: var(--eqo-tint);
+    color: var(--eqo-primary);
+}
+
+.eqo-tag-dev {
+    background: var(--eqo-tint-accent);
+    color: #6a7f13;
+}
+
+/* ---------- Tables ---------- */
+.eqo-table-wrap {
+    overflow-x: auto;
+    margin-top: 28px;
+    border-radius: 14px;
+}
+
+.eqo-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--eqo-surf);
+    border: 1px solid var(--eqo-line);
+    border-radius: 14px;
+    overflow: hidden;
+    font-size: 16px;
+    min-width: 620px;
+}
+
+.eqo-section.eqo-alt .eqo-table {
+    background: var(--eqo-bg);
+}
+
+.eqo-table th,
+.eqo-table td {
+    padding: 14px 18px;
+    text-align: start;
+    vertical-align: top;
+    border-bottom: 1px solid var(--eqo-line);
+    line-height: 1.75;
+}
+
+.eqo-table th {
+    background: var(--eqo-tint);
+    font-weight: 800;
+    font-size: 15px;
+    color: var(--eqo-primary);
+}
+
+.eqo-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.eqo-table tbody td:first-child {
+    font-weight: 800;
+    color: var(--eqo-ink);
+    width: 26%;
+}
+
+.eqo-td-muted {
+    color: var(--eqo-mut);
+}
+
+/* ---------- Goals ---------- */
+.eqo-goals {
+    margin-top: 24px;
+}
+
+.eqo-goal {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 18px;
+    padding: 20px 0;
+    border-top: 1px solid var(--eqo-line);
+}
+
+.eqo-goal:first-child {
+    border-top: 0;
+}
+
+.eqo-goal-n {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--eqo-accent);
+    -webkit-text-stroke: 1px var(--eqo-primary);
+    line-height: 1.2;
+    min-width: 2ch;
+}
+
+.eqo-goal h3 {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.eqo-goal p {
+    color: var(--eqo-mut);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ---------- Chips ---------- */
+.eqo-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.eqo-chips span {
+    background: var(--eqo-tint-accent);
+    color: #4d5f10;
+    border-radius: 10px;
+    padding: 7px 16px;
+    font-weight: 600;
+    font-size: 15.5px;
+}
+
+/* ---------- Placeholders / team ---------- */
+.eqo-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.eqo-placeholder {
+    border: 1px dashed var(--eqo-line);
+    border-radius: 14px;
+    padding: 22px 16px;
+    text-align: center;
+    background: var(--eqo-surf);
+}
+
+.eqo-section.eqo-alt .eqo-placeholder {
+    background: var(--eqo-bg);
+}
+
+.eqo-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--eqo-tint);
+    margin: 0 auto 12px;
+    display: grid;
+    place-items: center;
+    color: var(--eqo-primary);
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.eqo-placeholder h3 {
+    font-size: 17px;
+    color: var(--eqo-ink);
+}
+
+.eqo-placeholder p {
+    font-size: 14.5px;
+    margin-top: 3px;
+    color: var(--eqo-mut);
+}
+
+.eqo-member-name {
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+/* ---------- Tech stack ---------- */
+.eqo-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.eqo-stack span {
+    background: var(--eqo-tint);
+    color: var(--eqo-primary);
+    border-radius: 8px;
+    padding: 7px 15px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    direction: ltr;
+    font-weight: 600;
+}
+
+.eqo-stack span.eqo-stack-key {
+    background: var(--eqo-tint-accent);
+    color: #4d5f10;
+}
+
+/* ---------- FAQ ---------- */
+.eqo-faq {
+    max-width: 860px;
+    margin-top: 26px;
+}
+
+.eqo-details {
+    background: var(--eqo-surf);
+    border: 1px solid var(--eqo-line);
+    border-radius: 12px;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.eqo-section.eqo-alt .eqo-details {
+    background: var(--eqo-bg);
+}
+
+.eqo-details summary {
+    cursor: pointer;
+    padding: 16px 20px;
+    font-weight: 700;
+    font-size: 17px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--eqo-ink);
+}
+
+.eqo-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.eqo-details summary::after {
+    content: '+';
+    color: var(--eqo-primary);
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.eqo-details[open] summary::after {
+    content: '\2212';
+}
+
+.eqo-details p {
+    padding: 0 20px 18px;
+    color: var(--eqo-mut);
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+/* ---------- Implementation bars ---------- */
+.eqo-bars {
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.eqo-bar-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 7px;
+    font-weight: 700;
+}
+
+.eqo-bar-row em {
+    font-style: normal;
+    color: var(--eqo-mut);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.eqo-track {
+    height: 12px;
+    border-radius: 99px;
+    background: var(--eqo-line);
+    overflow: hidden;
+}
+
+.eqo-fill {
+    height: 100%;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--eqo-primary) 0%, var(--eqo-secondary) 100%);
+    transition: width 0.8s ease;
+}
+
+.eqo-fill-accent {
+    background: linear-gradient(90deg, var(--eqo-accent) 0%, var(--eqo-secondary) 100%);
+}
+
+.eqo-note {
+    margin-top: 24px;
+    color: var(--eqo-mut);
+    font-size: 14.5px;
+    line-height: 1.85;
+    max-width: 46em;
+}
+
+/* ---------- CTA ---------- */
+.eqo-cta {
+    background: linear-gradient(135deg, var(--eqo-primary-dark) 0%, var(--eqo-primary) 60%, var(--eqo-primary-light) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 58px 0;
+}
+
+.eqo-cta h2 {
+    font-size: clamp(24px, 3.4vw, 33px);
+    color: #fff;
+}
+
+.eqo-cta p {
+    margin-top: 10px;
+    opacity: 0.88;
+    font-size: 17px;
+}
+
+.eqo-cta-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.eqo-cta-link {
+    color: var(--eqo-accent);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    direction: ltr;
+}
+
+.eqo-cta-link:hover {
+    color: var(--eqo-accent-light);
+    text-decoration: underline;
+}
+
+.eqo-btn-light {
+    background: var(--eqo-accent);
+    color: var(--eqo-primary-dark);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.eqo-btn-light:hover {
+    color: var(--eqo-primary-dark);
+}
+
+/* ---------- Page footer ---------- */
+.eqo-page-footer {
+    background: var(--eqo-primary-dark);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 26px 0;
+    font-size: 15px;
+}
+
+.eqo-page-footer .eqo-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.eqo-brand {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--eqo-accent);
+    font-size: 20px;
+    direction: ltr;
+}
+
+/* ---------- RTL / LTR ---------- */
+.eqo-page.eqo-ltr .eqo-goal-n {
+    -webkit-text-stroke: 0;
+    color: var(--eqo-primary);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+    .eqo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 820px) {
+    .eqo-page {
+        padding-top: 96px;
+    }
+
+    .eqo-hero-grid,
+    .eqo-two,
+    .eqo-vm,
+    .eqo-grid,
+    .eqo-grid-2,
+    .eqo-list-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .eqo-hero-grid,
+    .eqo-two {
+        gap: 28px;
+    }
+
+    .eqo-two.eqo-flip .eqo-shot {
+        order: 0;
+    }
+
+    .eqo-strip-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .eqo-logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eqo-section {
+        padding: 46px 0;
+    }
+
+    .eqo-hero {
+        padding: 12px 0 36px;
+    }
+
+    .eqo-shot img {
+        max-height: 420px;
+    }
+}
+
+@media (max-width: 520px) {
+    .eqo-wrap {
+        padding: 0 16px;
+    }
+
+    .eqo-grid,
+    .eqo-logos {
+        grid-template-columns: 1fr;
+    }
+
+    .eqo-strip b {
+        font-size: 28px;
+    }
+
+    .eqo-subhead {
+        font-size: 20px;
+        margin-top: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .eqo-card,
+    .eqo-btn,
+    .eqo-fill {
+        transition: none;
+    }
+}

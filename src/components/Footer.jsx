@@ -10,7 +10,8 @@ const EnhancedFooter = () => {
             { name: t('nav.home'), href: '#home' },
             { name: t('nav.about'), href: '#about' },
             { name: t('nav.services'), href: '#services' },
-            { name: t('nav.apps'), href: '#apps' }
+            { name: t('nav.apps'), href: '#apps' },
+            { name: t('nav.eqoGo'), href: '/eqo-go' }
         ],
         support: [
             { name: t('nav.goals'), href: '#goals' },
