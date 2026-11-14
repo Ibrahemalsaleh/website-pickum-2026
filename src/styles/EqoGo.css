@@ -152,8 +152,9 @@
 
 /* ---------- Stats strip ---------- */
 .eqo-strip {
-    background: var(--eqo-ink);
-    color: var(--eqo-bg);
+    background: var(--eqo-bg);
+    color: var(--eqo-ink);
+    border-block: 1px solid var(--eqo-line);
 }
 
 .eqo-strip-grid {
@@ -169,14 +170,15 @@
     display: block;
     font-size: 34px;
     line-height: 1.2;
+    color: var(--eqo-teal);
 }
 
 .eqo-strip small {
     font-size: 14px;
-    opacity: 0.85;
     line-height: 1.6;
     display: block;
     margin-top: 4px;
+    color: var(--eqo-mut);
 }
 
 /* ---------- Sections ---------- */
