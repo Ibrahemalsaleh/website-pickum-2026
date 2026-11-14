@@ -1,22 +1,25 @@
 /* ===================================
    EQO GO — Company Profile Page
-   Uses the Ahlan Bikum brand palette
+   Brand palette taken from the EQO GO
+   company profile (teal + orange)
    =================================== */
 
 .eqo-page {
-    --eqo-primary: #1e5631;
-    --eqo-primary-dark: #0f2918;
-    --eqo-primary-light: #2a7d46;
-    --eqo-secondary: #76b947;
-    --eqo-accent: #a4de02;
-    --eqo-accent-light: #c8f442;
-    --eqo-ink: #0f2918;
-    --eqo-mut: #5b7062;
-    --eqo-bg: #f7faf5;
-    --eqo-surf: #ffffff;
-    --eqo-line: #e0e9da;
-    --eqo-tint: rgba(118, 185, 71, 0.10);
-    --eqo-tint-accent: rgba(164, 222, 2, 0.14);
+    --eqo-teal: #0A9E78;
+    --eqo-teal-dark: #0A7D60;
+    --eqo-teal-light: #2FD1A4;
+    --eqo-org: #E8730C;
+    --eqo-org-dark: #B85A08;
+    --eqo-org-light: #FFB26B;
+
+    --eqo-ink: #12294A;
+    --eqo-mut: #53647F;
+    --eqo-bg: #F5F9FD;
+    --eqo-surf: #FFFFFF;
+    --eqo-line: #DCE6F2;
+    --eqo-tint: #E6F4F0;
+    --eqo-tint2: #FDEEDC;
+    --eqo-shadow: 0 1px 2px rgba(18, 41, 74, 0.06);
 
     font-family: 'Tajawal', 'Cairo', 'Segoe UI', system-ui, sans-serif;
     background: var(--eqo-bg);
@@ -37,7 +40,7 @@
 .eqo-page h3 {
     line-height: 1.35;
     margin: 0;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--eqo-ink);
 }
 
@@ -45,27 +48,32 @@
     margin: 0;
 }
 
+.eqo-page :focus-visible {
+    outline: 3px solid var(--eqo-org);
+    outline-offset: 3px;
+}
+
 .eqo-wrap {
-    max-width: 1180px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 22px;
 }
 
 .eqo-eyebrow {
     display: inline-block;
-    background: var(--eqo-tint-accent);
-    color: var(--eqo-primary);
-    border: 1px solid rgba(30, 86, 49, 0.14);
+    background: var(--eqo-tint);
+    color: var(--eqo-teal-dark);
+    border: 1px solid var(--eqo-line);
     border-radius: 999px;
     padding: 5px 16px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 18px;
 }
 
 /* ---------- Hero ---------- */
 .eqo-hero {
-    padding: 20px 0 56px;
+    padding: 20px 0 52px;
 }
 
 .eqo-hero-grid {
@@ -76,7 +84,7 @@
 }
 
 .eqo-hero h1 {
-    font-size: clamp(30px, 4.6vw, 50px);
+    font-size: clamp(30px, 4.6vw, 48px);
     letter-spacing: -0.5px;
 }
 
@@ -85,7 +93,7 @@
     color: var(--eqo-mut);
     font-size: 19px;
     line-height: 1.9;
-    max-width: 36em;
+    max-width: 34em;
 }
 
 .eqo-pills {
@@ -108,20 +116,21 @@
 .eqo-btn {
     display: inline-block;
     margin-top: 28px;
-    background: linear-gradient(135deg, var(--eqo-primary) 0%, var(--eqo-primary-light) 100%);
+    background: var(--eqo-teal);
     color: #fff;
     text-decoration: none;
     font-weight: 700;
     font-size: 16px;
     padding: 13px 30px;
     border-radius: 12px;
-    box-shadow: 0 8px 22px rgba(30, 86, 49, 0.22);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 8px 22px rgba(10, 158, 120, 0.22);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .eqo-btn:hover {
+    background: var(--eqo-teal-dark);
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(30, 86, 49, 0.3);
+    box-shadow: 0 12px 28px rgba(10, 158, 120, 0.3);
     color: #fff;
 }
 
@@ -130,7 +139,7 @@
     overflow: hidden;
     background: var(--eqo-tint);
     border: 1px solid var(--eqo-line);
-    box-shadow: 0 18px 40px rgba(15, 41, 24, 0.08);
+    box-shadow: 0 18px 40px rgba(18, 41, 74, 0.08);
 }
 
 .eqo-shot img {
@@ -143,8 +152,8 @@
 
 /* ---------- Stats strip ---------- */
 .eqo-strip {
-    background: linear-gradient(135deg, var(--eqo-primary-dark) 0%, var(--eqo-primary) 55%, var(--eqo-primary-light) 100%);
-    color: #fff;
+    background: var(--eqo-ink);
+    color: var(--eqo-bg);
 }
 
 .eqo-strip-grid {
@@ -160,12 +169,11 @@
     display: block;
     font-size: 34px;
     line-height: 1.2;
-    color: var(--eqo-accent);
 }
 
 .eqo-strip small {
     font-size: 14px;
-    opacity: 0.88;
+    opacity: 0.85;
     line-height: 1.6;
     display: block;
     margin-top: 4px;
@@ -173,7 +181,7 @@
 
 /* ---------- Sections ---------- */
 .eqo-section {
-    padding: 66px 0;
+    padding: 64px 0;
 }
 
 .eqo-section.eqo-alt {
@@ -182,7 +190,7 @@
 }
 
 .eqo-page h2 {
-    font-size: clamp(25px, 3.4vw, 35px);
+    font-size: clamp(25px, 3.6vw, 34px);
 }
 
 .eqo-sub {
@@ -190,14 +198,14 @@
     margin-top: 10px;
     font-size: 17px;
     line-height: 1.9;
-    max-width: 46em;
+    max-width: 40em;
 }
 
 .eqo-para {
     margin-top: 16px;
     font-size: 17px;
     line-height: 1.95;
-    color: #24382c;
+    color: var(--eqo-ink);
 }
 
 .eqo-subhead {
@@ -213,7 +221,7 @@
 .eqo-two {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 44px;
+    gap: 42px;
     align-items: center;
 }
 
@@ -231,10 +239,10 @@
 
 .eqo-values span {
     background: var(--eqo-tint);
-    color: var(--eqo-primary);
+    color: var(--eqo-ink);
     border-radius: 10px;
     padding: 7px 17px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 15px;
 }
 
@@ -257,7 +265,7 @@
     position: relative;
     font-size: 16.5px;
     line-height: 1.8;
-    color: #24382c;
+    color: var(--eqo-ink);
 }
 
 .eqo-list li::before {
@@ -268,15 +276,15 @@
     width: 12px;
     height: 12px;
     border-radius: 4px;
-    background: var(--eqo-accent);
+    background: var(--eqo-teal);
 }
 
 .eqo-list-driver li::before {
-    background: var(--eqo-secondary);
+    background: var(--eqo-org);
 }
 
 .eqo-list b {
-    font-weight: 800;
+    font-weight: 600;
     color: var(--eqo-ink);
 }
 
@@ -292,8 +300,8 @@
     font-size: 16px;
     line-height: 1.7;
     padding-bottom: 12px;
-    border-bottom: 1px dashed var(--eqo-line);
-    color: #24382c;
+    border-bottom: 1px solid var(--eqo-line);
+    color: var(--eqo-ink);
 }
 
 .eqo-facts li:last-child {
@@ -302,8 +310,8 @@
 }
 
 .eqo-facts b {
-    color: var(--eqo-primary);
-    font-weight: 800;
+    color: var(--eqo-teal-dark);
+    font-weight: 600;
 }
 
 /* ---------- Vision / mission ---------- */
@@ -321,11 +329,11 @@
 }
 
 .eqo-vm-vision {
-    background: linear-gradient(135deg, var(--eqo-primary) 0%, var(--eqo-primary-light) 100%);
+    background: var(--eqo-teal-dark);
 }
 
 .eqo-vm-mission {
-    background: linear-gradient(135deg, #2a5f1a 0%, #4a8a24 100%);
+    background: var(--eqo-org-dark);
 }
 
 .eqo-vm-box h3 {
@@ -364,8 +372,8 @@
     border: 1px solid var(--eqo-line);
     border-radius: 14px;
     padding: 20px 20px 22px;
-    box-shadow: 0 1px 2px rgba(18, 41, 74, 0.05);
-    border-top: 4px solid var(--eqo-primary);
+    box-shadow: var(--eqo-shadow);
+    border-top: 4px solid var(--eqo-teal);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -375,7 +383,7 @@
 
 .eqo-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(15, 41, 24, 0.09);
+    box-shadow: 0 12px 28px rgba(18, 41, 74, 0.09);
 }
 
 .eqo-card h3 {
@@ -386,15 +394,15 @@
 .eqo-card p {
     color: var(--eqo-mut);
     font-size: 15.5px;
-    line-height: 1.8;
+    line-height: 1.75;
 }
 
 .eqo-card-primary {
-    border-top-color: var(--eqo-primary);
+    border-top-color: var(--eqo-teal);
 }
 
 .eqo-card-accent {
-    border-top-color: var(--eqo-accent);
+    border-top-color: var(--eqo-org);
 }
 
 .eqo-card-dark {
@@ -409,17 +417,17 @@
     padding: 1px 9px;
     margin-inline-start: 8px;
     vertical-align: middle;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .eqo-tag-on {
     background: var(--eqo-tint);
-    color: var(--eqo-primary);
+    color: var(--eqo-teal-dark);
 }
 
 .eqo-tag-dev {
-    background: var(--eqo-tint-accent);
-    color: #6a7f13;
+    background: var(--eqo-tint2);
+    color: var(--eqo-org-dark);
 }
 
 /* ---------- Tables ---------- */
@@ -455,9 +463,9 @@
 
 .eqo-table th {
     background: var(--eqo-tint);
-    font-weight: 800;
+    font-weight: 600;
     font-size: 15px;
-    color: var(--eqo-primary);
+    color: var(--eqo-ink);
 }
 
 .eqo-table tr:last-child td {
@@ -465,9 +473,9 @@
 }
 
 .eqo-table tbody td:first-child {
-    font-weight: 800;
+    font-weight: 600;
     color: var(--eqo-ink);
-    width: 26%;
+    width: 30%;
 }
 
 .eqo-td-muted {
@@ -476,7 +484,7 @@
 
 /* ---------- Goals ---------- */
 .eqo-goals {
-    margin-top: 24px;
+    margin-top: 20px;
 }
 
 .eqo-goal {
@@ -493,9 +501,8 @@
 
 .eqo-goal-n {
     font-size: 30px;
-    font-weight: 800;
-    color: var(--eqo-accent);
-    -webkit-text-stroke: 1px var(--eqo-primary);
+    font-weight: 700;
+    color: var(--eqo-org);
     line-height: 1.2;
     min-width: 2ch;
 }
@@ -516,16 +523,16 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .eqo-chips span {
-    background: var(--eqo-tint-accent);
-    color: #4d5f10;
+    background: var(--eqo-tint2);
+    color: var(--eqo-ink);
     border-radius: 10px;
     padding: 7px 16px;
-    font-weight: 600;
-    font-size: 15.5px;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 /* ---------- Placeholders / team ---------- */
@@ -537,11 +544,12 @@
 }
 
 .eqo-placeholder {
-    border: 1px dashed var(--eqo-line);
+    border: 2px dashed var(--eqo-line);
     border-radius: 14px;
     padding: 22px 16px;
     text-align: center;
     background: var(--eqo-surf);
+    color: var(--eqo-mut);
 }
 
 .eqo-section.eqo-alt .eqo-placeholder {
@@ -556,8 +564,8 @@
     margin: 0 auto 12px;
     display: grid;
     place-items: center;
-    color: var(--eqo-primary);
-    font-weight: 800;
+    color: var(--eqo-teal-dark);
+    font-weight: 700;
     font-size: 22px;
 }
 
@@ -587,24 +595,23 @@
 
 .eqo-stack span {
     background: var(--eqo-tint);
-    color: var(--eqo-primary);
+    color: var(--eqo-ink);
     border-radius: 8px;
     padding: 7px 15px;
     font-size: 15px;
     font-family: Arial, sans-serif;
     direction: ltr;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .eqo-stack span.eqo-stack-key {
-    background: var(--eqo-tint-accent);
-    color: #4d5f10;
+    background: var(--eqo-tint2);
 }
 
 /* ---------- FAQ ---------- */
 .eqo-faq {
-    max-width: 860px;
-    margin-top: 26px;
+    max-width: 820px;
+    margin-top: 20px;
 }
 
 .eqo-details {
@@ -622,7 +629,7 @@
 .eqo-details summary {
     cursor: pointer;
     padding: 16px 20px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 17px;
     list-style: none;
     display: flex;
@@ -637,7 +644,7 @@
 
 .eqo-details summary::after {
     content: '+';
-    color: var(--eqo-primary);
+    color: var(--eqo-org);
     font-size: 24px;
     line-height: 1;
     font-weight: 400;
@@ -656,25 +663,25 @@
 
 /* ---------- Implementation bars ---------- */
 .eqo-bars {
-    margin-top: 30px;
+    margin-top: 28px;
     display: grid;
-    gap: 20px;
-    max-width: 800px;
+    gap: 18px;
+    max-width: 760px;
 }
 
 .eqo-bar-row {
     display: flex;
     justify-content: space-between;
     gap: 12px;
-    margin-bottom: 7px;
-    font-weight: 700;
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
 .eqo-bar-row em {
     font-style: normal;
     color: var(--eqo-mut);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .eqo-track {
@@ -687,38 +694,38 @@
 .eqo-fill {
     height: 100%;
     border-radius: 99px;
-    background: linear-gradient(90deg, var(--eqo-primary) 0%, var(--eqo-secondary) 100%);
+    background: var(--eqo-teal);
     transition: width 0.8s ease;
 }
 
 .eqo-fill-accent {
-    background: linear-gradient(90deg, var(--eqo-accent) 0%, var(--eqo-secondary) 100%);
+    background: var(--eqo-org);
 }
 
 .eqo-note {
-    margin-top: 24px;
+    margin-top: 22px;
     color: var(--eqo-mut);
     font-size: 14.5px;
     line-height: 1.85;
-    max-width: 46em;
+    max-width: 44em;
 }
 
 /* ---------- CTA ---------- */
 .eqo-cta {
-    background: linear-gradient(135deg, var(--eqo-primary-dark) 0%, var(--eqo-primary) 60%, var(--eqo-primary-light) 100%);
-    color: #fff;
+    background: var(--eqo-ink);
+    color: var(--eqo-bg);
     text-align: center;
-    padding: 58px 0;
+    padding: 56px 0;
 }
 
 .eqo-cta h2 {
-    font-size: clamp(24px, 3.4vw, 33px);
-    color: #fff;
+    font-size: clamp(24px, 3.4vw, 32px);
+    color: var(--eqo-bg);
 }
 
 .eqo-cta p {
     margin-top: 10px;
-    opacity: 0.88;
+    opacity: 0.85;
     font-size: 17px;
 }
 
@@ -731,7 +738,7 @@
 }
 
 .eqo-cta-link {
-    color: var(--eqo-accent);
+    color: var(--eqo-org-light);
     text-decoration: none;
     font-weight: 700;
     font-size: 17px;
@@ -739,24 +746,26 @@
 }
 
 .eqo-cta-link:hover {
-    color: var(--eqo-accent-light);
+    color: #fff;
     text-decoration: underline;
 }
 
 .eqo-btn-light {
-    background: var(--eqo-accent);
-    color: var(--eqo-primary-dark);
+    background: var(--eqo-org);
+    color: #fff;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
 }
 
 .eqo-btn-light:hover {
-    color: var(--eqo-primary-dark);
+    background: var(--eqo-org-dark);
+    color: #fff;
 }
 
 /* ---------- Page footer ---------- */
 .eqo-page-footer {
-    background: var(--eqo-primary-dark);
-    color: rgba(255, 255, 255, 0.75);
+    background: var(--eqo-surf);
+    border-top: 1px solid var(--eqo-line);
+    color: var(--eqo-mut);
     padding: 26px 0;
     font-size: 15px;
 }
@@ -773,15 +782,12 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     letter-spacing: 0.5px;
-    color: var(--eqo-accent);
-    font-size: 20px;
+    font-size: 21px;
     direction: ltr;
-}
-
-/* ---------- RTL / LTR ---------- */
-.eqo-page.eqo-ltr .eqo-goal-n {
-    -webkit-text-stroke: 0;
-    color: var(--eqo-primary);
+    background: linear-gradient(90deg, var(--eqo-teal) 0%, var(--eqo-teal) 42%, var(--eqo-org) 58%, var(--eqo-org) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* ---------- Responsive ---------- */
@@ -816,7 +822,7 @@
 
     .eqo-strip-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 18px;
     }
 
     .eqo-logos {
@@ -824,11 +830,11 @@
     }
 
     .eqo-section {
-        padding: 46px 0;
+        padding: 44px 0;
     }
 
     .eqo-hero {
-        padding: 12px 0 36px;
+        padding: 12px 0 32px;
     }
 
     .eqo-shot img {
