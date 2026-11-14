@@ -328,49 +328,6 @@ const EqoGo = () => {
                 </div>
             </section>
 
-            {/* Implementation status */}
-            <section className="eqo-section">
-                <div className="eqo-wrap">
-                    <h2>{c.status.title}</h2>
-                    <p className="eqo-sub">{c.status.sub}</p>
-                    <div className="eqo-bars">
-                        {c.status.bars.map((bar) => (
-                            <div key={bar.label} className="eqo-bar">
-                                <div className="eqo-bar-row">
-                                    <span>{bar.label}</span>
-                                    <em>{bar.note}</em>
-                                </div>
-                                <div className="eqo-track">
-                                    <div
-                                        className={`eqo-fill ${bar.accent === 'accent' ? 'eqo-fill-accent' : ''}`}
-                                        style={{ width: `${bar.value}%` }}
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    <p className="eqo-note">{c.status.note}</p>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <div className="eqo-cta">
-                <div className="eqo-wrap">
-                    <h2>{c.cta.title}</h2>
-                    <p>{c.cta.text}</p>
-                    <div className="eqo-cta-links">
-                        <a href="tel:00962781058132" className="eqo-cta-link">00962781058132</a>
-                        <a href="mailto:info@pickum.jo" className="eqo-cta-link">info@pickum.jo</a>
-                    </div>
-                    <a href="/#contact" className="eqo-btn eqo-btn-light">{c.cta.button}</a>
-                </div>
-            </div>
-            <div className="eqo-page-footer">
-                <div className="eqo-wrap">
-                    <span className="eqo-brand">EQO GO</span>
-                    <span>{c.cta.footer}</span>
-                </div>
-            </div>
         </div>
     );
 };

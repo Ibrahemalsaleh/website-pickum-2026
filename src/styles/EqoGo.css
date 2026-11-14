@@ -661,135 +661,6 @@
     line-height: 1.85;
 }
 
-/* ---------- Implementation bars ---------- */
-.eqo-bars {
-    margin-top: 28px;
-    display: grid;
-    gap: 18px;
-    max-width: 760px;
-}
-
-.eqo-bar-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 6px;
-    font-weight: 600;
-}
-
-.eqo-bar-row em {
-    font-style: normal;
-    color: var(--eqo-mut);
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.eqo-track {
-    height: 12px;
-    border-radius: 99px;
-    background: var(--eqo-line);
-    overflow: hidden;
-}
-
-.eqo-fill {
-    height: 100%;
-    border-radius: 99px;
-    background: var(--eqo-teal);
-    transition: width 0.8s ease;
-}
-
-.eqo-fill-accent {
-    background: var(--eqo-org);
-}
-
-.eqo-note {
-    margin-top: 22px;
-    color: var(--eqo-mut);
-    font-size: 14.5px;
-    line-height: 1.85;
-    max-width: 44em;
-}
-
-/* ---------- CTA ---------- */
-.eqo-cta {
-    background: var(--eqo-ink);
-    color: var(--eqo-bg);
-    text-align: center;
-    padding: 56px 0;
-}
-
-.eqo-cta h2 {
-    font-size: clamp(24px, 3.4vw, 32px);
-    color: var(--eqo-bg);
-}
-
-.eqo-cta p {
-    margin-top: 10px;
-    opacity: 0.85;
-    font-size: 17px;
-}
-
-.eqo-cta-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 18px;
-}
-
-.eqo-cta-link {
-    color: var(--eqo-org-light);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 17px;
-    direction: ltr;
-}
-
-.eqo-cta-link:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.eqo-btn-light {
-    background: var(--eqo-org);
-    color: #fff;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
-}
-
-.eqo-btn-light:hover {
-    background: var(--eqo-org-dark);
-    color: #fff;
-}
-
-/* ---------- Page footer ---------- */
-.eqo-page-footer {
-    background: var(--eqo-surf);
-    border-top: 1px solid var(--eqo-line);
-    color: var(--eqo-mut);
-    padding: 26px 0;
-    font-size: 15px;
-}
-
-.eqo-page-footer .eqo-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.eqo-brand {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    font-size: 21px;
-    direction: ltr;
-    background: linear-gradient(90deg, var(--eqo-teal) 0%, var(--eqo-teal) 42%, var(--eqo-org) 58%, var(--eqo-org) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
     .eqo-grid {
@@ -864,8 +735,7 @@
 
 @media (prefers-reduced-motion: reduce) {
     .eqo-card,
-    .eqo-btn,
-    .eqo-fill {
+    .eqo-btn {
         transition: none;
     }
 }
