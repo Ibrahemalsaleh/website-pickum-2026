@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import logo from '../assets/logo_vertical.png';
+import logo from '../assets/ahlan-bikum-logo.png';
 
 const EnhancedFooter = () => {
     const { t } = useLanguage();
@@ -203,13 +203,13 @@ const EnhancedFooter = () => {
                 .logo-icon {
                     width: 60px;
                     height: 60px;
-                    background: linear-gradient(135deg, #a4de02 0%, #c8f442 100%);
+                    background: #fff;
                     border-radius: 16px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     font-size: 32px;
-                    box-shadow: 0 8px 24px rgba(164, 222, 2, 0.3);
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
                     overflow: hidden;
                 }
 
@@ -217,7 +217,6 @@ const EnhancedFooter = () => {
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
-                    padding: 4px;
                 }
 
                 .brand-logo h3 {

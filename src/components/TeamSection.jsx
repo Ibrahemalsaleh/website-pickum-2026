@@ -1,60 +1,29 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import IbrahimImage from '../assets/WhatsApp Image 2025-10-01 at 15.09.01_964bb634.jpg'; 
-import KHALIDImage from '../assets/Screenshot 2025-10-01 165247.png';
+import { eqoContent } from '../context/eqoContent';
+import aseelPortrait from '../assets/aseel-mohammad-awad.png';
+import ibrahimPortrait from '../assets/WhatsApp Image 2025-10-01 at 15.09.01_964bb634.jpg';
+import khaledPortrait from '../assets/khaled-jaafar-ghaith.png';
+import manarPortrait from '../assets/manar-noor-aldin-alnabtiti.png';
+import namaaPortrait from '../assets/namaa-munawwar-sleihat.png';
+import raafatPortrait from '../assets/raafat-jameel-mohammad-awad.png';
+import tamerPortrait from '../assets/tamer-abu-daqar.png';
+
+const teamPhotos = {
+    aseel: aseelPortrait,
+    ibrahim: ibrahimPortrait,
+    khaled: khaledPortrait,
+    manar: manarPortrait,
+    namaa: namaaPortrait,
+    raafat: raafatPortrait,
+    tamer: tamerPortrait
+};
 
 const TeamSection = () => {
-    const { t, language } = useLanguage();
+    const { language } = useLanguage();
     const [activeCard, setActiveCard] = useState(null);
-
-    const team = [
-        {
-            id: 1,
-            name: "رفعت جميل محمد عوض",
-            nameEn: "Refat Jameel Mohammad Awad",
-            role: "رئيس مجلس الادارة",
-            roleEn: "Chairman of the Board",
-            image: 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 viewBox=%220 0 200 200%22%3E%3Crect fill=%22%231e5631%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23a4de02%22 font-size=%2272%22 font-family=%22Arial%22 x=%22100%22 y=%22120%22 text-anchor=%22middle%22%3ERA%3C/text%3E%3C/svg%3E',
-            bio: "رئيس هيئة مديرين",
-            bioEn: "Chairman of Directors",
-            social: {
-                phone: '+9627772576', 
-                email: 'refat.Awad@pickum.jo' 
-            },
-            color: '#76b947'
-        },
-
-        {
-            id: 3,
-            name: "خالد جعفر شحاده غيث",
-            nameEn: "Khalid Jafar Shehadeh Ghaith",
-            role: "مدير العمليات والاتصال",
-            roleEn: "Operations & Communication Manager",
-            image: KHALIDImage, 
-            bio: 'يشرف على سير العمليات التشغيلية ويدير مركز الاتصال',
-            bioEn: 'Oversees operational processes and manages the call center',
-            social: {
-                phone: '+962797023732',
-                email: 'khalid.jafar@pickum.jo'
-            },
-            color: '#76b947'
-        },
-        {
-            id: 4,
-            name: 'ابراهيم وائل الصالح',
-            nameEn: 'Ibrahim Wael Al-Saleh',
-            role: 'مسؤول تكنولوجيا المعلومات',
-            roleEn: 'IT Manager',
-            image: IbrahimImage, 
-            bio: 'متخصص في متابعة أمور التطبيقات وكتابة الأكواد',
-            bioEn: 'Specialist in application management and coding',
-            social: {
-                phone: '+96791414606',
-                email: 'ibrahim.wael@pickum.jo'
-            },
-            color: '#a4de02'
-        }
-    ];
+    const content = eqoContent[language] || eqoContent.ar;
+    const team = content.team.members;
 
     return (
         <section id="team" className="team-section">
@@ -71,22 +40,22 @@ const TeamSection = () => {
                 <div className="section-header">
                     <div className="header-badge">
                         <span className="badge-icon">👥</span>
-                        <span>{t('team.badge')}</span>
+                        <span>{content.team.title}</span>
                     </div>
                     <p className="section-subtitle">
-                        {t('team.subtitle')}
+                        {content.team.sub}
                     </p>
                 </div>
 
                 <div className="team-grid">
                     {team.map((member, index) => (
                         <div
-                            key={member.id}
+                            key={member.name}
                             className={`team-card ${activeCard === index ? 'active' : ''}`}
                             onMouseEnter={() => setActiveCard(index)}
                             onMouseLeave={() => setActiveCard(null)}
                             style={{
-                                '--member-color': member.color,
+                                '--member-color': '#76b947',
                                 '--card-index': index
                             }}
                         >
@@ -101,44 +70,29 @@ const TeamSection = () => {
                                     <div className="avatar-ring ring-2" />
                                     <div className="avatar-ring ring-3" />
                                     <div className="avatar">
-                                        <img 
-                                            src={member.image} 
-                                            alt={language === 'ar' ? member.name : member.nameEn} 
-                                            className="avatar-image" 
-                                        />
+                                        {member.photo ? (
+                                            <img
+                                                src={teamPhotos[member.photo]}
+                                                alt={member.name}
+                                                className={`avatar-image avatar-image-${member.photo}`}
+                                                loading="lazy"
+                                            />
+                                        ) : (
+                                            <span className="avatar-initial">{member.initial}</span>
+                                        )}
                                     </div>
                                     <div className="avatar-glow" />
                                 </div>
 
                                 <div className="member-info">
                                     <h3 className="member-name">
-                                        {language === 'ar' ? member.name : member.nameEn}
+                                        {member.name}
                                     </h3>
                                     <p className="member-role">
-                                        {language === 'ar' ? member.role : member.roleEn}
-                                    </p>
-                                    <p className="member-bio">
-                                        {language === 'ar' ? member.bio : member.bioEn}
+                                        {member.role}
                                     </p>
                                 </div>
 
-                                 <div className="social-links">
-                                    {member.social.phone && (
-                                        <a href={`tel:${member.social.phone}`} className="social-link" aria-label="Phone">
-                                            <svg>
-                                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                                            </svg>
-                                        </a>
-                                    )}
-                                    {member.social.email && (
-                                        <a href={`mailto:${member.social.email}`} className="social-link" aria-label="Email">
-                                            <svg>
-                                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" strokeWidth="2"/>
-                                                <path d="M22 6l-10 7L2 6" stroke="currentColor" strokeWidth="2"/>
-                                            </svg>
-                                        </a>
-                                    )}
-                                </div>
                             </div>
 
                             <div className="card-shine" />
@@ -311,6 +265,15 @@ const TeamSection = () => {
                     object-fit: cover;
                     border-radius: 50%;
                 }
+                .avatar-image-manar,
+                .avatar-image-namaa {
+                    object-position: center bottom;
+                }
+                .avatar-initial {
+                    color: white;
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
 
                 .team-card:hover .avatar,
                 .team-card.active .avatar {
@@ -373,38 +336,6 @@ const TeamSection = () => {
                     color: var(--member-color);
                     font-weight: 600;
                     margin-bottom: 12px;
-                }
-                .member-bio {
-                    color: #4a5568;
-                    font-size: 0.9375rem;
-                    line-height: 1.6;
-                }
-                .social-links {
-                    display: flex;
-                    justify-content: center;
-                    gap: 12px;
-                }
-                .social-link {
-                    width: 44px;
-                    height: 44px;
-                    background: rgba(0, 0, 0, 0.05);
-                    border-radius: 12px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: #1a1a1a;
-                    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-                    text-decoration: none;
-                }
-                .social-link svg {
-                    width: 20px;
-                    height: 20px;
-                }
-                .social-link:hover {
-                    background: var(--member-color);
-                    color: white;
-                    transform: translateY(-4px) scale(1.1);
-                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
                 }
                 .card-shine {
                     position: absolute;

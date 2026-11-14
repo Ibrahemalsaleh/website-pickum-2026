@@ -16,6 +16,8 @@ import TeamSection from './components/TeamSection';
 import FAQSection from './components/FAQSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import EqoHeader from './components/EqoHeader';
+import EqoFooter from './components/EqoFooter';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import EqoGo from './components/EqoGo';
 
@@ -305,6 +307,7 @@ const MainLayout = ({ children }) => {
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const [loadingProgress, setLoadingProgress] = useState(0);
     const location = useLocation();
+    const isEqoPage = location.pathname.replace(/\/+$/, '') === '/eqo-go';
 
     useEffect(() => {
         if (isInitialLoad) {
@@ -360,16 +363,26 @@ const MainLayout = ({ children }) => {
     return (
         <>
             <ScrollToTop />
-            <FloatingShapes />
-            <ScrollProgressBar />
-            <Header />
-            <main className="main-content">
-                <div className="page-wrapper">
-                    {children}
-                </div>
-            </main>
-            <Footer />
-            <BackToTopButton />
+            {isEqoPage ? (
+                <>
+                    <EqoHeader />
+                    <main className="main-content">
+                        <div className="page-wrapper">{children}</div>
+                    </main>
+                    <EqoFooter />
+                </>
+            ) : (
+                <>
+                    <FloatingShapes />
+                    <ScrollProgressBar />
+                    <Header />
+                    <main className="main-content">
+                        <div className="page-wrapper">{children}</div>
+                    </main>
+                    <Footer />
+                    <BackToTopButton />
+                </>
+            )}
             
             <style jsx>{`
                 .page-wrapper {

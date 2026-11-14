@@ -7,7 +7,7 @@ export const eqoContent = {
       eyebrow: 'تطبيق تابع لشركة أهلاً بكم للتوصيل',
       title: 'منظومة نقل ذكية مبنية على سوق الأردن',
       lead: 'EQO GO تطبيق لطلب الرحلات يربط الراكب بالسائق بسعر واضح قبل الطلب، ويعطي السائق صافي ربحه قبل القبول، وتديره الشركة بالكامل من لوحة واحدة. انطلق من داخل شركة أهلا بكم لتوصيل الطلبات، وبنى على خبرتها في التشغيل الميداني.',
-      pills: ['عمّان، الأردن', 'الدينار الأردني', '7 لغات', 'كاش ومحفظة وبطاقة وCliQ'],
+      pills: ['الأردن وسوريا', 'الدينار الأردني', '7 لغات', 'كاش ومحفظة وبطاقة وCliQ'],
       imageAlt: 'واجهات تطبيق EQO GO للراكب والسائق'
     },
     stats: [
@@ -20,7 +20,7 @@ export const eqoContent = {
       title: 'من نحن',
       sub: 'حلول رقمية متكاملة للنقل التشاركي وطلب الرحلات.',
       paragraphs: [
-        'EQO GO منصة رقمية متخصصة في خدمات النقل التشاركي وطلب الرحلات، تعمل ضمن شركة أهلاً بكم لتوصيل الطلبات في الأردن، وتهدف إلى توفير تجربة تنقّل سهلة ومرنة تربط بين الركاب والسائقين من خلال حلول تقنية متكاملة.',
+        'EQO GO منصة رقمية متخصصة في خدمات النقل التشاركي وطلب الرحلات، تعمل ضمن شركة أهلاً بكم لتوصيل الطلبات في الأردن وسوريا، وتهدف إلى توفير تجربة تنقّل سهلة ومرنة تربط بين الركاب والسائقين من خلال حلول تقنية متكاملة.',
         'توفر المنصة منظومة رقمية تشمل تطبيقاً للركاب، وتطبيقاً للسائقين، ولوحة تحكم إدارية؛ بما يسهّل إدارة الرحلات والطلبات ومتابعة العمليات بكفاءة ووضوح.',
         'وتولي EQO GO أهمية للوضوح والشفافية في التسعير، فتُظهر الأسعار والأنواع والخيارات والشروط للراكب والسائق قبل تأكيد الرحلة، بما يعزز الثقة ويجعل الاستخدام أسهل.'
       ],
@@ -30,6 +30,7 @@ export const eqoContent = {
         ['الاسم التجاري', 'EQO GO'],
         ['الشركة الأم', 'أهلاً بكم لتوصيل الطلبات'],
         ['المقر الرئيسي', 'عمّان، الأردن'],
+        ['نطاق التواجد', 'الأردن وسوريا'],
         ['طبيعة النشاط', 'النقل التشاركي وطلب الرحلات'],
         ['العملة', 'الدينار الأردني'],
         ['اللغات', '7 لغات']
@@ -199,15 +200,17 @@ export const eqoContent = {
     },
     team: {
       title: 'فريقنا المميز',
-      sub: 'فريق يجمع الإدارة والعمليات ومركز الاتصال والتقنية والتسويق تحت سقف واحد.',
+      sub: 'فريق يجمع الإدارة والعمليات ومركز الاتصال والمحاسبة والتقنية والتسويق تحت سقف واحد.',
       members: [
         { initial: 'س', name: 'سلطان البغدادي', role: 'المدير التنفيذي' },
-        { initial: 'ت', name: 'تامر أبو دقر', role: 'مدير العمليات' },
-        { initial: 'خ', name: 'خالد', role: 'مدير الكول سنتر' },
-        { initial: 'إ', name: 'إبراهيم وائل الصالح', role: 'قسم تكنولوجيا المعلومات' },
-        { initial: 'م', name: 'منار النبتيتي', role: 'قسم التسويق الإلكتروني' },
-        { initial: 'ر', name: 'رافت عوض', role: 'قسم التسويق الميداني' },
-        { initial: 'أ', name: 'أسيل جربوع', role: 'قسم التسويق الميداني' }
+        { initial: 'ت', name: 'تامر أبو دقر', role: 'مدير العمليات', photo: 'tamer' },
+        { initial: 'خ', name: 'خالد جعفر غيث', role: 'مدير الكول سنتر', photo: 'khaled' },
+        { initial: 'إ', name: 'إبراهيم وائل الصالح', role: 'قسم تكنولوجيا المعلومات', photo: 'ibrahim' },
+        { initial: 'س', name: 'سبا جاسر خريسات', role: 'قسم تكنولوجيا المعلومات' },
+        { initial: 'م', name: 'منار نور الدين النبتيتي', role: 'قسم التسويق الإلكتروني', photo: 'manar' },
+        { initial: 'ر', name: 'رافت جميل محمد عوض', role: 'قسم التسويق الميداني', photo: 'raafat' },
+        { initial: 'أ', name: 'اسيل محمد عوض', role: 'قسم التسويق الميداني', photo: 'aseel' },
+        { initial: 'ن', name: 'نماء منور السليحات', role: 'قسم المحاسبة', photo: 'namaa' }
       ]
     },
     faq: {
@@ -241,6 +244,35 @@ export const eqoContent = {
       text: 'للشراكات والاستفسارات:',
       button: 'تواصل معنا',
       footer: 'شركة أهلاً بكم لتوصيل الطلبات · عمّان، الأردن'
+    },
+    chrome: {
+      tagline: 'Easy · Quick · On-time',
+      backToSite: 'أهلاً بكم',
+      backToSiteNote: 'الموقع الرئيسي',
+      menu: 'القائمة',
+      links: [
+        ['خدماتنا', '#services'],
+        ['تطبيق الراكب', '#rider'],
+        ['تطبيق السائق', '#driver'],
+        ['أهدافنا', '#goals'],
+        ['شركاؤنا', '#partners'],
+        ['فريقنا', '#team'],
+        ['الأسئلة', '#faq']
+      ],
+      about: 'تطبيق طلب رحلات تابع لشركة أهلاً بكم للتوصيل. سعر واضح قبل الطلب، وصافي ربح واضح قبل القبول، وإدارة كاملة من لوحة واحدة.',
+      quickTitle: 'روابط سريعة',
+      companyTitle: 'الشركة',
+      contactTitle: 'تواصل معنا',
+      companyLinks: [
+        ['أهلاً بكم — الموقع الرئيسي', '/'],
+        ['نبذة عن EQO GO', '/eqo-go'],
+        ['سياسة الخصوصية', '/privacy-policy']
+      ],
+      address: 'عمّان، الأردن',
+      phone: '00962781068132',
+      email: 'info@pickum.jo',
+      rights: '© 2026 EQO GO — جميع الحقوق محفوظة.',
+      note: 'تطبيق تابع لشركة أهلاً بكم لتوصيل الطلبات'
     }
   },
 
@@ -249,7 +281,7 @@ export const eqoContent = {
       eyebrow: 'An app by Ahlan Bikum for Delivery',
       title: 'A smart mobility system built for the Jordanian market',
       lead: 'EQO GO is a ride-hailing app that connects riders with drivers at a clear price before booking, and shows drivers their net earnings before accepting. The whole operation is managed by the company from a single dashboard. It was born inside Ahlan Bikum for Delivery and builds on the company\u2019s field-operations experience.',
-      pills: ['Amman, Jordan', 'Jordanian Dinar', '7 languages', 'Cash, wallet, card & CliQ'],
+      pills: ['Jordan & Syria', 'Jordanian Dinar', '7 languages', 'Cash, wallet, card & CliQ'],
       imageAlt: 'EQO GO rider and driver app screens'
     },
     stats: [
@@ -262,7 +294,7 @@ export const eqoContent = {
       title: 'About Us',
       sub: 'Integrated digital solutions for shared mobility and ride-hailing.',
       paragraphs: [
-        'EQO GO is a digital platform specialized in shared mobility and ride-hailing. It operates within Ahlan Bikum for Delivery in Jordan and aims to deliver an easy, flexible mobility experience that connects riders and drivers through integrated technology.',
+        'EQO GO is a digital platform specialized in shared mobility and ride-hailing. It operates within Ahlan Bikum for Delivery in Jordan and Syria and aims to deliver an easy, flexible mobility experience that connects riders and drivers through integrated technology.',
         'The platform provides a complete digital ecosystem: a rider app, a driver app, and an admin dashboard, making ride and order management efficient and transparent.',
         'EQO GO puts clarity and pricing transparency first: prices, ride types, options, and terms are shown to both rider and driver before the ride is confirmed, which builds trust and makes the service easier to use.'
       ],
@@ -272,6 +304,7 @@ export const eqoContent = {
         ['Trade name', 'EQO GO'],
         ['Parent company', 'Ahlan Bikum for Delivery'],
         ['Headquarters', 'Amman, Jordan'],
+        ['Presence', 'Jordan & Syria'],
         ['Business', 'Shared mobility & ride-hailing'],
         ['Currency', 'Jordanian Dinar'],
         ['Languages', '7 languages']
@@ -441,15 +474,17 @@ export const eqoContent = {
     },
     team: {
       title: 'Our Team',
-      sub: 'A team bringing management, operations, the call center, technology, and marketing together under one roof.',
+      sub: 'A team bringing management, operations, the call center, accounting, technology, and marketing together under one roof.',
       members: [
         { initial: 'S', name: 'Sultan Al-Baghdadi', role: 'Chief Executive Officer' },
-        { initial: 'T', name: 'Tamer Abu Daqar', role: 'Operations Manager' },
-        { initial: 'K', name: 'Khaled', role: 'Call Center Manager' },
-        { initial: 'I', name: 'Ibrahim Wael Al-Saleh', role: 'Information Technology' },
-        { initial: 'M', name: 'Manar Al-Nabtiti', role: 'Digital Marketing' },
-        { initial: 'R', name: 'Ra\u2019fat Awad', role: 'Field Marketing' },
-        { initial: 'A', name: 'Aseel Jarbou', role: 'Field Marketing' }
+        { initial: 'T', name: 'Tamer Abu Daqar', role: 'Operations Manager', photo: 'tamer' },
+        { initial: 'K', name: 'Khaled Jaafar Ghaith', role: 'Call Center Manager', photo: 'khaled' },
+        { initial: 'I', name: 'Ibrahim Wael Al-Saleh', role: 'Information Technology', photo: 'ibrahim' },
+        { initial: 'S', name: 'Saba Jaser Khreisat', role: 'Information Technology' },
+        { initial: 'M', name: 'Manar Noor Al-Din Al-Nabtiti', role: 'Digital Marketing', photo: 'manar' },
+        { initial: 'R', name: 'Raafat Jameel Mohammad Awad', role: 'Field Marketing', photo: 'raafat' },
+        { initial: 'A', name: 'Aseel Mohammad Awad', role: 'Field Marketing', photo: 'aseel' },
+        { initial: 'N', name: 'Namaa Munawwar Al-Sleihat', role: 'Accounting', photo: 'namaa' }
       ]
     },
     faq: {
@@ -483,6 +518,35 @@ export const eqoContent = {
       text: 'For partnerships and inquiries:',
       button: 'Contact us',
       footer: 'Ahlan Bikum for Delivery · Amman, Jordan'
+    },
+    chrome: {
+      tagline: 'Easy · Quick · On-time',
+      backToSite: 'Ahlan Bikum',
+      backToSiteNote: 'Main site',
+      menu: 'Menu',
+      links: [
+        ['Services', '#services'],
+        ['Rider app', '#rider'],
+        ['Driver app', '#driver'],
+        ['Goals', '#goals'],
+        ['Partners', '#partners'],
+        ['Team', '#team'],
+        ['FAQ', '#faq']
+      ],
+      about: 'A ride-hailing app by Ahlan Bikum for Delivery. A clear price before booking, clear net earnings before accepting, and full management from one dashboard.',
+      quickTitle: 'Quick links',
+      companyTitle: 'Company',
+      contactTitle: 'Contact us',
+      companyLinks: [
+        ['Ahlan Bikum — main site', '/'],
+        ['About EQO GO', '/eqo-go'],
+        ['Privacy policy', '/privacy-policy']
+      ],
+      address: 'Amman, Jordan',
+      phone: '00962781068132',
+      email: 'info@pickum.jo',
+      rights: '© 2026 EQO GO — All rights reserved.',
+      note: 'An app by Ahlan Bikum for Delivery'
     }
   }
 };

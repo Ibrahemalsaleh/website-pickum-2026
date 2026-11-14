@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import privacyPolicyBanner from '../assets/privacy-policy-banner.png';
 
 const PrivacyPolicy = () => {
     const { t, isRTL } = useLanguage();
@@ -40,7 +41,13 @@ const PrivacyPolicy = () => {
     return (
         <div className="privacy-policy">
             {/* Hero Section */}
-            <div className="privacy-hero"></div>
+            <div className="privacy-hero">
+                <img
+                    src={privacyPolicyBanner}
+                    alt={isRTL ? 'صورة سياسة الخصوصية' : 'Privacy policy banner'}
+                    className="privacy-hero-image"
+                />
+            </div>
 
             {/* Main Content */}
             <div className="privacy-container">
@@ -352,10 +359,16 @@ const PrivacyPolicy = () => {
 
                 /* ==================== HERO SECTION ==================== */
                 .privacy-hero {
-                    min-height: 600px;
-                    background: url('https://www.roadak-consult.com/wp-content/uploads/2024/02/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9-1.png') center / contain no-repeat;
-                    background-color: #f8fafc;
                     position: relative;
+                    margin-top: 80px;
+                    overflow: hidden;
+                    background: #063e52;
+                }
+
+                .privacy-hero-image {
+                    display: block;
+                    width: 100%;
+                    height: auto;
                 }
 
 
@@ -1071,7 +1084,8 @@ const PrivacyPolicy = () => {
 
                 @media (max-width: 768px) {
                     .privacy-hero {
-                        padding: 110px 0 60px;
+                        margin-top: 72px;
+                        padding: 0;
                     }
 
                     .hero-title {
@@ -1113,7 +1127,7 @@ const PrivacyPolicy = () => {
 
                 @media (max-width: 480px) {
                     .privacy-hero {
-                        padding: 100px 0 40px;
+                        padding: 0;
                     }
 
                     .hero-title {

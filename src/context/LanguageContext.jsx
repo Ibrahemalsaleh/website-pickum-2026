@@ -99,6 +99,12 @@ const translations = {
         description: 'توصيل فوري لطلباتك العاجلة',
         feature1: 'سريع وآمن',
         feature2: 'متاح 24/7'
+      },
+      eqoGo: {
+        title: 'إيكو جو',
+        description: 'خدمة نقل تشاركي من خدمات شركة أهلاً بكم، تربط الركاب بالسائقين وتعرض سعر الرحلة قبل تأكيدها.',
+        feature1: 'إحدى خدمات شركة أهلاً بكم',
+        feature2: 'سعر واضح قبل الرحلة'
       }
     },
     apps: {
@@ -288,10 +294,10 @@ const translations = {
         },
         {
             id: 6,
-            name: 'شركة البرمجيات',
-            nameEn: 'CSC',
+            name: 'شركة CSC Beyond',
+            nameEn: 'CSC Beyond',
             logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQHL5HP_-9VbKA/company-logo_200_200/company-logo_200_200/0/1630574362433?e=2147483647&v=beta&t=EoCNPSs8g7HMAdiSmCtJF-m5zoEDac1wQWlWZorbKtU',
-            description: 'تطوير الأنظمة',
+            description: 'تطوير الأنظمة والبرمجيات',
             category: 'تقنية'
         }
       ]
@@ -1178,6 +1184,12 @@ privacy: {
         description: 'Instant delivery for your urgent orders',
         feature1: 'Fast & Secure',
         feature2: 'Available 24/7'
+      },
+      eqoGo: {
+        title: 'EQO GO',
+        description: 'A ride-hailing service from Ahlan Bikum, connecting riders with drivers and showing the ride price before confirmation.',
+        feature1: 'Part of Ahlan Bikum’s services',
+        feature2: 'Clear fare before the ride'
       }
     },
     apps: {
@@ -1367,10 +1379,10 @@ privacy: {
         },
         {
             id: 6,
-            name: 'Software Company',
-            nameEn: 'CSC',
+            name: 'CSC Beyond',
+            nameEn: 'CSC Beyond',
             logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQHL5HP_-9VbKA/company-logo_200_200/company-logo_200_200/0/1630574362433?e=2147483647&v=beta&t=EoCNPSs8g7HMAdiSmCtJF-m5zoEDac1wQWlWZorbKtU',
-            description: 'Systems Development',
+            description: 'Systems & Software Development',
             category: 'Technology'
         }
       ]

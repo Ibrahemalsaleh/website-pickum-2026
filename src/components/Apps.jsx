@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ahlanBikumIcon from '../assets/logo_vertical.png'; 
+import ahlanBikumIcon from '../assets/ahlan-bikum-logo.png';
 import nashmiIcon from '../assets/logo.nashmi.png';
 import { useLanguage } from '../context/LanguageContext';
 

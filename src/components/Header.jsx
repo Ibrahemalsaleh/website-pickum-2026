@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
-import logoImage from '../assets/logo_vertical.png';
+import logoImage from '../assets/ahlan-bikum-logo.png';
 
 const EnhancedHeader = () => {
     const { t, isRTL } = useLanguage();
@@ -295,6 +295,7 @@ const EnhancedHeader = () => {
             <header 
                 ref={headerRef}
                 className={`header ${isScrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'mobile-open' : ''}`}
+                dir={isRTL ? 'rtl' : 'ltr'}
             >
                 <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
 
@@ -304,7 +305,7 @@ const EnhancedHeader = () => {
                             <img src={logoImage} alt={t('nav.home')} />
                         </Link>
 
-                        <nav className="desktop-nav">
+                        <nav className="desktop-nav" aria-label={isRTL ? 'القائمة الرئيسية' : 'Main navigation'}>
                             <ul>
                                 {navLinks.map((link) => (
                                     <li key={link.id} className="nav-item" ref={link.id === 'services' ? servicesMenuRef : null}>
@@ -318,9 +319,12 @@ const EnhancedHeader = () => {
                             <LanguageSwitcher />
 
                             <button 
+                                type="button"
                                 className="mobile-menu-btn"
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                                 aria-label={isRTL ? 'القائمة' : 'Menu'}
+                                aria-expanded={isMobileMenuOpen}
+                                aria-controls="mobile-navigation"
                             >
                                 <span className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
                                     <span></span>
@@ -333,22 +337,37 @@ const EnhancedHeader = () => {
                 </div>
             </header>
 
-            <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-                <div className="mobile-overlay" onClick={() => setIsMobileMenuOpen(false)} />
+            <div
+                id="mobile-navigation"
+                className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}
+                dir={isRTL ? 'rtl' : 'ltr'}
+                aria-hidden={!isMobileMenuOpen}
+            >
+                <button
+                    type="button"
+                    className="mobile-overlay"
+                    aria-label={isRTL ? 'إغلاق القائمة' : 'Close navigation'}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                />
                 <div className="mobile-panel">
                     <div className="mobile-header">
                         <Link to="/" className="mobile-logo" onClick={() => setIsMobileMenuOpen(false)}>
                             <img src={logoImage} alt={t('nav.home')} />
                             <span>{isRTL ? 'أهلاً بكم' : 'Ahlan Pickum'}</span>
                         </Link>
-                        <button className="mobile-close" onClick={() => setIsMobileMenuOpen(false)}>
+                        <button
+                            type="button"
+                            className="mobile-close"
+                            aria-label={isRTL ? 'إغلاق القائمة' : 'Close navigation'}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
                             <svg viewBox="0 0 24 24" fill="none">
                                 <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                             </svg>
                         </button>
                     </div>
 
-                    <nav className="mobile-nav">
+                    <nav className="mobile-nav" aria-label={isRTL ? 'القائمة الرئيسية' : 'Main navigation'}>
                         <ul>
                             {navLinks.map((link) => (
                                 <li key={link.id}>
@@ -1024,6 +1043,352 @@ const EnhancedHeader = () => {
                     to {
                         opacity: 1;
                         transform: translateX(50%) translateY(0);
+                    }
+                }
+
+                .header {
+                    --header-green: #1e5631;
+                    background: rgba(255, 255, 255, 0.96);
+                    border-bottom: 1px solid rgba(30, 86, 49, 0.12);
+                    box-shadow: 0 4px 20px rgba(24, 46, 34, 0.08);
+                    isolation: isolate;
+                }
+
+                .header::before {
+                    height: 4px;
+                    background: linear-gradient(90deg, #1e5631 0 72%, #a4de02 72%);
+                }
+
+                .header::after {
+                    display: none;
+                }
+
+                .header.scrolled {
+                    background: rgba(255, 255, 255, 0.98);
+                    box-shadow: 0 8px 26px rgba(24, 46, 34, 0.12);
+                }
+
+                .header .container {
+                    width: min(1320px, 100%);
+                    margin-inline: auto;
+                    padding-inline: 20px;
+                }
+
+                .header-content {
+                    min-height: 84px;
+                    gap: clamp(12px, 1.8vw, 26px);
+                    padding: 10px 0;
+                }
+
+                .header.scrolled .header-content {
+                    min-height: 76px;
+                    padding: 6px 0;
+                }
+
+                .logo {
+                    display: flex;
+                    flex: 0 0 auto;
+                    align-items: center;
+                    height: 64px;
+                    filter: none;
+                }
+
+                .header.scrolled .logo {
+                    height: 58px;
+                }
+
+                .logo:hover {
+                    transform: translateY(-1px);
+                    filter: none;
+                }
+
+                .logo::before,
+                .logo:hover::before {
+                    display: none;
+                }
+
+                .logo img {
+                    max-width: 112px;
+                }
+
+                .desktop-nav {
+                    min-width: 0;
+                }
+
+                .desktop-nav ul {
+                    gap: clamp(0px, 0.5vw, 7px);
+                }
+
+                .nav-item {
+                    position: relative;
+                }
+
+                .nav-link {
+                    min-height: 42px;
+                    gap: 6px;
+                    padding: 8px clamp(5px, 0.75vw, 10px);
+                    border-radius: 999px;
+                    color: #35423a;
+                    font-size: clamp(13px, 0.95vw, 14px);
+                    font-weight: 600;
+                    white-space: nowrap;
+                    transform: none;
+                }
+
+                .nav-link:hover {
+                    transform: none;
+                    color: var(--header-green);
+                }
+
+                .nav-icon {
+                    display: none;
+                }
+
+                .nav-link::after {
+                    bottom: 3px;
+                    height: 2px;
+                }
+
+                .mega-menu {
+                    top: calc(100% + 8px);
+                    width: min(760px, calc(100vw - 32px));
+                    max-height: calc(100vh - 104px);
+                    overflow-y: auto;
+                    margin-top: 0;
+                    border-radius: 20px;
+                    box-shadow: 0 18px 50px rgba(26, 48, 34, 0.18);
+                }
+
+                .header-actions {
+                    flex: 0 0 auto;
+                    gap: 10px;
+                }
+
+                .header .lang-btn {
+                    min-height: 42px;
+                    padding: 8px 12px;
+                    border: 1px solid #dce7df;
+                    border-radius: 999px;
+                    color: var(--header-green);
+                    font-size: 13px;
+                }
+
+                .header .lang-btn:hover {
+                    border-color: rgba(30, 86, 49, 0.35);
+                    background: #f2f8f3;
+                }
+
+                .mobile-menu-btn {
+                    width: 44px;
+                    height: 44px;
+                    padding: 11px;
+                    border: 1px solid #dce7df;
+                    border-radius: 13px;
+                    background: #fff;
+                }
+
+                .mobile-menu-btn:hover {
+                    background: #f2f8f3;
+                }
+
+                .mobile-menu {
+                    visibility: hidden;
+                    transition: visibility 0.28s ease;
+                }
+
+                .mobile-menu.active {
+                    visibility: visible;
+                }
+
+                .mobile-overlay {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                    border: 0;
+                    background: rgba(17, 31, 23, 0.48);
+                    cursor: default;
+                }
+
+                .mobile-panel {
+                    z-index: 1;
+                    right: 0;
+                    left: auto;
+                    width: min(390px, 92vw);
+                    max-width: 100%;
+                    height: 100vh;
+                    height: 100dvh;
+                    overflow-y: auto;
+                    background: #fff;
+                    box-shadow: -16px 0 48px rgba(20, 38, 27, 0.18);
+                    transition: transform 0.28s ease;
+                }
+
+                .mobile-menu[dir="rtl"] .mobile-panel {
+                    right: auto;
+                    left: 0;
+                    transform: translateX(-100%);
+                    box-shadow: 16px 0 48px rgba(20, 38, 27, 0.18);
+                }
+
+                .mobile-menu[dir="rtl"].active .mobile-panel {
+                    transform: translateX(0);
+                }
+
+                .mobile-menu[dir="ltr"] .mobile-panel {
+                    transform: translateX(100%);
+                }
+
+                .mobile-menu[dir="ltr"].active .mobile-panel {
+                    transform: translateX(0);
+                }
+
+                .mobile-header {
+                    min-height: 90px;
+                    padding: 16px 22px;
+                    border-bottom-color: #e7eee8;
+                }
+
+                .mobile-logo {
+                    gap: 12px;
+                }
+
+                .mobile-logo img {
+                    width: 56px;
+                    height: 56px;
+                    object-fit: contain;
+                }
+
+                .mobile-logo span {
+                    color: var(--header-green);
+                }
+
+                .mobile-close {
+                    display: grid;
+                    width: 42px;
+                    height: 42px;
+                    padding: 9px;
+                    place-items: center;
+                    border: 1px solid #e1e9e3;
+                    border-radius: 12px;
+                }
+
+                .mobile-nav {
+                    display: block;
+                    padding: 18px 20px;
+                }
+
+                .mobile-nav ul {
+                    display: grid;
+                    gap: 6px;
+                }
+
+                .mobile-nav li {
+                    margin: 0;
+                }
+
+                .mobile-link {
+                    min-height: 48px;
+                    padding: 12px 14px;
+                    border: 1px solid transparent;
+                    border-radius: 13px;
+                    font-weight: 600;
+                    text-align: start;
+                }
+
+                .mobile-link:hover {
+                    border-color: #e0ebe2;
+                    background: #f3f8f3;
+                }
+
+                .mobile-link > svg:first-child {
+                    width: 19px;
+                    height: 19px;
+                    color: var(--header-green);
+                }
+
+                .arrow {
+                    margin-inline-start: auto;
+                }
+
+                .mobile-submenu {
+                    margin: 6px 0 4px;
+                    padding: 6px;
+                    border: 1px solid #e6eee7;
+                    border-radius: 14px;
+                    background: #f7faf7;
+                }
+
+                .mobile-submenu a {
+                    min-height: 42px;
+                    border-radius: 9px;
+                }
+
+                .mobile-footer {
+                    padding: 16px 20px 24px;
+                    border-top-color: #e7eee8;
+                }
+
+                @media (max-width: 1120px) {
+                    .desktop-nav {
+                        display: none;
+                    }
+
+                    .mobile-menu-btn {
+                        display: grid;
+                        place-items: center;
+                    }
+                }
+
+                @media (max-width: 520px) {
+                    .header .container {
+                        padding-inline: 14px;
+                    }
+
+                    .header-content {
+                        min-height: 76px;
+                        gap: 10px;
+                    }
+
+                    .header.scrolled .header-content {
+                        min-height: 70px;
+                    }
+
+                    .logo {
+                        height: 56px;
+                    }
+
+                    .header.scrolled .logo {
+                        height: 52px;
+                    }
+
+                    .logo img {
+                        max-width: 98px;
+                    }
+
+                    .header-actions {
+                        gap: 7px;
+                    }
+
+                    .header .lang-btn {
+                        min-height: 40px;
+                        padding: 7px 10px;
+                    }
+
+                    .mobile-menu-btn {
+                        width: 42px;
+                        height: 42px;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .header,
+                    .header *,
+                    .mobile-menu,
+                    .mobile-menu * {
+                        scroll-behavior: auto !important;
+                        transition-duration: 0.01ms !important;
+                        animation-duration: 0.01ms !important;
                     }
                 }
             `}</style>

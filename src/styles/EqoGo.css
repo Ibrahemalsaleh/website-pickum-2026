@@ -53,6 +53,10 @@
     outline-offset: 3px;
 }
 
+.eqo-page [id] {
+    scroll-margin-top: 104px;
+}
+
 .eqo-wrap {
     max-width: 1080px;
     margin: 0 auto;
@@ -700,6 +704,26 @@
     color: var(--eqo-teal-dark);
     font-weight: 700;
     font-size: 22px;
+}
+
+.eqo-avatar-photo {
+    width: 136px;
+    height: 136px;
+    overflow: hidden;
+    background: var(--eqo-surf);
+}
+
+.eqo-avatar-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+}
+
+.eqo-avatar-photo img.eqo-avatar-image-manar,
+.eqo-avatar-photo img.eqo-avatar-image-namaa {
+    object-position: center bottom;
 }
 
 .eqo-placeholder h3 {

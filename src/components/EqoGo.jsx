@@ -2,9 +2,26 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { eqoContent } from '../context/eqoContent';
 import { partnerLogos, partnerLogoAlt } from '../context/partnerLogos';
+import aseelPortrait from '../assets/aseel-mohammad-awad.png';
 import heroImg from '../assets/eqo-go-app-1.jpg';
 import driverImg from '../assets/eqo-go-app-2.jpg';
+import ibrahimPortrait from '../assets/WhatsApp Image 2025-10-01 at 15.09.01_964bb634.jpg';
+import khaledPortrait from '../assets/khaled-jaafar-ghaith.png';
+import manarPortrait from '../assets/manar-noor-aldin-alnabtiti.png';
+import namaaPortrait from '../assets/namaa-munawwar-sleihat.png';
+import raafatPortrait from '../assets/raafat-jameel-mohammad-awad.png';
+import tamerPortrait from '../assets/tamer-abu-daqar.png';
 import '../styles/EqoGo.css';
+
+const teamPhotos = {
+    aseel: aseelPortrait,
+    ibrahim: ibrahimPortrait,
+    khaled: khaledPortrait,
+    manar: manarPortrait,
+    namaa: namaaPortrait,
+    raafat: raafatPortrait,
+    tamer: tamerPortrait
+};
 
 const EqoGo = () => {
     const { language } = useLanguage();
@@ -14,7 +31,7 @@ const EqoGo = () => {
     return (
         <div className={`eqo-page ${isRTL ? 'eqo-rtl' : 'eqo-ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
             {/* Hero */}
-            <section className="eqo-hero">
+            <section className="eqo-hero" id="top">
                 <div className="eqo-wrap eqo-hero-grid">
                     <div className="eqo-hero-copy">
                         <span className="eqo-eyebrow">{c.hero.eyebrow}</span>
@@ -147,7 +164,7 @@ const EqoGo = () => {
             </section>
 
             {/* Services */}
-            <section className="eqo-section">
+            <section className="eqo-section" id="services">
                 <div className="eqo-wrap">
                     <h2>{c.services.title}</h2>
                     <p className="eqo-sub">{c.services.sub}</p>
@@ -168,7 +185,7 @@ const EqoGo = () => {
             </section>
 
             {/* Rider app */}
-            <section className="eqo-section eqo-alt">
+            <section className="eqo-section eqo-alt" id="rider">
                 <div className="eqo-wrap">
                     <h2>{c.rider.title}</h2>
                     <p className="eqo-sub">{c.rider.sub}</p>
@@ -183,7 +200,7 @@ const EqoGo = () => {
             </section>
 
             {/* Driver app */}
-            <section className="eqo-section">
+            <section className="eqo-section" id="driver">
                 <div className="eqo-wrap eqo-two eqo-flip">
                     <div>
                         <h2>{c.driver.title}</h2>
@@ -203,7 +220,7 @@ const EqoGo = () => {
             </section>
 
             {/* Goals */}
-            <section className="eqo-section eqo-alt">
+            <section className="eqo-section eqo-alt" id="goals">
                 <div className="eqo-wrap">
                     <h2>{c.goals.title}</h2>
                     <div className="eqo-goals">
@@ -230,7 +247,7 @@ const EqoGo = () => {
             </section>
 
             {/* Challenges */}
-            <section className="eqo-section">
+            <section className="eqo-section" id="challenges">
                 <div className="eqo-wrap">
                     <h2>{c.challenges.title}</h2>
                     <p className="eqo-sub">{c.challenges.sub}</p>
@@ -265,7 +282,7 @@ const EqoGo = () => {
             </section>
 
             {/* Partners */}
-            <section className="eqo-section eqo-alt">
+            <section className="eqo-section eqo-alt" id="partners">
                 <div className="eqo-wrap">
                     <h2>{c.partners.title}</h2>
                     <p className="eqo-sub">{c.partners.sub}</p>
@@ -309,14 +326,23 @@ const EqoGo = () => {
             </section>
 
             {/* Team */}
-            <section className="eqo-section">
+            <section className="eqo-section" id="team">
                 <div className="eqo-wrap">
                     <h2>{c.team.title}</h2>
                     <p className="eqo-sub">{c.team.sub}</p>
                     <div className="eqo-grid eqo-team-grid">
                         {c.team.members.map((member) => (
                             <div key={member.name} className="eqo-placeholder">
-                                <span className="eqo-avatar">{member.initial}</span>
+                                <span className={`eqo-avatar${member.photo ? ' eqo-avatar-photo' : ''}`}>
+                                    {member.photo ? (
+                                        <img
+                                            src={teamPhotos[member.photo]}
+                                            alt=""
+                                            className={`eqo-avatar-image eqo-avatar-image-${member.photo}`}
+                                            loading="lazy"
+                                        />
+                                    ) : member.initial}
+                                </span>
                                 <h3 className="eqo-member-name">{member.name}</h3>
                                 <p>{member.role}</p>
                             </div>
@@ -326,7 +352,7 @@ const EqoGo = () => {
             </section>
 
             {/* FAQ */}
-            <section className="eqo-section eqo-alt">
+            <section className="eqo-section eqo-alt" id="faq">
                 <div className="eqo-wrap">
                     <h2>{c.faq.title}</h2>
                     <div className="eqo-faq">

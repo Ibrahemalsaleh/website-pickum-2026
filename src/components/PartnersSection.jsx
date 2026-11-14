@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { eqoContent } from '../context/eqoContent';
+import { partnerLogos, partnerLogoAlt } from '../context/partnerLogos';
 
 const PartnersSection = () => {
-    const { t } = useLanguage();
+    const { language } = useLanguage();
+    const content = eqoContent[language] || eqoContent.ar;
+    const partners = content.partners;
     const [hoveredPartner, setHoveredPartner] = useState(null);
-    const partners = t('partners.list');
 
     return (
         <section id="partners" className="partners-section">
@@ -21,47 +24,40 @@ const PartnersSection = () => {
                 <div className="section-header">
                     <div className="header-badge">
                         <span className="badge-icon">🤝</span>
-                        <span>{t('partners.badge')}</span>
+                        <span>{partners.title}</span>
                     </div>
                     <p className="section-subtitle">
-                        {t('partners.subtitle')}
+                        {partners.sub}
                     </p>
                 </div>
 
                 <div className="partners-grid">
-                    {partners.map((partner, index) => (
+                    {partners.cards.map((partner, index) => (
                         <div
-                            key={partner.id}
+                            key={partner.title}
                             className={`partner-card ${hoveredPartner === index ? 'hovered' : ''}`}
                             onMouseEnter={() => setHoveredPartner(index)}
                             onMouseLeave={() => setHoveredPartner(null)}
                             style={{ '--partner-index': index }}
                         >
                             <div className="card-glow" />
-                            
-                            <div className="partner-logo">
-                                <img 
-                                    src={partner.logo} 
-                                    alt={`${t('partners.logoAltPrefix')} ${partner.name}`}
-                                    className="logo-image"
-                                    onError={(e) => {
-                                        e.target.style.display = 'none';
-                                        e.target.nextSibling.style.display = 'flex';
-                                    }}
-                                />
-                                <div className="logo-fallback" style={{ display: 'none' }}>
-                                    <span>{partner.nameEn}</span>
+                            {partner.logos?.length ? (
+                                <div className="partner-logo-group">
+                                    {partner.logos.map((logo) => (
+                                        <img
+                                            key={logo}
+                                            src={partnerLogos[logo]}
+                                            alt={partnerLogoAlt[logo]}
+                                            className="logo-image"
+                                            loading="lazy"
+                                        />
+                                    ))}
                                 </div>
-                                <div className="logo-ring" />
-                            </div>
+                            ) : null}
 
                             <div className="partner-info">
-                                <h3 className="partner-name">{partner.name}</h3>
-                                {partner.nameEn && (
-                                    <p className="partner-name-en">{partner.nameEn}</p>
-                                )}
-                                <p className="partner-description">{partner.description}</p>
-                                <span className="partner-category">{partner.category}</span>
+                                <h3 className="partner-name">{partner.title}</h3>
+                                <p className="partner-description">{partner.text}</p>
                             </div>
 
                             <div className="card-shine" />
@@ -69,23 +65,33 @@ const PartnersSection = () => {
                     ))}
                 </div>
 
-                <div className="partners-stats">
-                    <div className="stat-box">
-                        <div className="stat-icon">🏢</div>
-                        <div className="stat-value">5+</div>
-                        <div className="stat-label">{t('partners.stats.partners')}</div>
+                    <h3 className="partners-commercial-title">{partners.commercialTitle}</h3>
+                    <div className="partners-grid partners-commercial-grid">
+                        {partners.commercial.map((partner, index) => (
+                            <div
+                                key={partner.logo}
+                                className={`partner-card ${hoveredPartner === partners.cards.length + index ? 'hovered' : ''}`}
+                                onMouseEnter={() => setHoveredPartner(partners.cards.length + index)}
+                                onMouseLeave={() => setHoveredPartner(null)}
+                                style={{ '--partner-index': partners.cards.length + index }}
+                            >
+                                <div className="card-glow" />
+                                <div className="partner-logo-group partner-logo-single">
+                                    <img
+                                        src={partnerLogos[partner.logo]}
+                                        alt={partnerLogoAlt[partner.logo]}
+                                        className="logo-image"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div className="partner-info">
+                                    <h3 className="partner-name">{partner.name}</h3>
+                                    <p className="partner-description">{partners.commercialRole}</p>
+                                </div>
+                                <div className="card-shine" />
+                            </div>
+                        ))}
                     </div>
-                    <div className="stat-box">
-                        <div className="stat-icon">🌍</div>
-                        <div className="stat-value">2</div>
-                        <div className="stat-label">{t('partners.stats.countries')}</div>
-                    </div>
-                    <div className="stat-box">
-                        <div className="stat-icon">📈</div>
-                        <div className="stat-value">95%</div>
-                        <div className="stat-label">{t('partners.stats.satisfaction')}</div>
-                    </div>
-                </div>
             </div>
 
             <style jsx>{`
@@ -167,11 +173,47 @@ const PartnersSection = () => {
                     line-height: 1.6;
                 }
 
+                .partners-commercial-title {
+                    margin: 0 0 32px;
+                    color: #1e5631;
+                    font-size: clamp(1.5rem, 3vw, 2rem);
+                    text-align: center;
+                }
+
                 .partners-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
                     gap: 32px;
                     margin-bottom: 80px;
+                }
+
+                .partner-logo-group {
+                    position: relative;
+                    z-index: 1;
+                    min-height: 120px;
+                    margin: 0 auto 24px;
+                    padding: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 14px;
+                    background: #f8fafc;
+                    border-radius: 20px;
+                }
+
+                .partner-logo-group .logo-image {
+                    position: relative;
+                    width: auto;
+                    height: auto;
+                    max-width: 100px;
+                    max-height: 54px;
+                    object-fit: contain;
+                }
+
+                .partner-logo-single .logo-image {
+                    max-width: 120px;
+                    max-height: 76px;
                 }
 
                 .partner-card {

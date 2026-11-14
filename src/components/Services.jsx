@@ -51,6 +51,17 @@ const EnhancedServices = () => {
             gradient: 'linear-gradient(135deg, #a4de02 0%, #c8f442 100%)',
             feature1: t('services.pickupService.feature1'),
             feature2: t('services.pickupService.feature2')
+        },
+        {
+            id: 'eqo-go-service',
+            route: '/eqo-go',
+            icon: '🚖',
+            title: t('services.eqoGo.title'),
+            description: t('services.eqoGo.description'),
+            color: '#0A9E78',
+            gradient: 'linear-gradient(135deg, #0A7D60 0%, #17618F 55%, #D97721 100%)',
+            feature1: t('services.eqoGo.feature1'),
+            feature2: t('services.eqoGo.feature2')
         }
     ];
 
