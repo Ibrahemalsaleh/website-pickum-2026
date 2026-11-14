@@ -355,6 +355,132 @@
     line-height: 1.85;
 }
 
+/* ---------- Vision section: extra visual clarity ---------- */
+.eqo-vision h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 6px;
+}
+
+.eqo-vision .eqo-vm {
+    gap: 22px;
+    margin-top: 34px;
+}
+
+.eqo-vision .eqo-vm-box {
+    padding: 34px 32px;
+}
+
+.eqo-vision .eqo-vm-box h3 {
+    font-size: 26px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eqo-vision .eqo-vm-box h3::before {
+    content: '';
+    width: 26px;
+    height: 5px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.85);
+    flex: none;
+}
+
+.eqo-vision .eqo-vm-box p {
+    font-size: 20px;
+    line-height: 1.95;
+    font-weight: 500;
+}
+
+.eqo-vision .eqo-vm-box small {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 17px;
+    line-height: 2;
+    opacity: 0.96;
+}
+
+.eqo-vision .eqo-subhead {
+    font-size: 27px;
+    margin-top: 58px;
+    padding-inline-start: 16px;
+    border-inline-start: 5px solid var(--eqo-teal);
+    line-height: 1.5;
+}
+
+.eqo-vision .eqo-subhead + .eqo-sub {
+    margin-top: 10px;
+    padding-inline-start: 21px;
+}
+
+.eqo-vision .eqo-sub {
+    font-size: 18px;
+    color: #43536b;
+}
+
+.eqo-vision .eqo-grid {
+    margin-top: 26px;
+    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.eqo-vision .eqo-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+.eqo-vision .eqo-card {
+    padding: 24px 22px 26px;
+}
+
+.eqo-vision .eqo-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.eqo-vision .eqo-card p {
+    font-size: 17px;
+    line-height: 1.95;
+    color: #43536b;
+}
+
+.eqo-vision .eqo-list {
+    margin-top: 26px;
+    gap: 16px;
+}
+
+.eqo-vision .eqo-list li {
+    font-size: 18px;
+    line-height: 1.95;
+}
+
+.eqo-vision .eqo-table-wrap {
+    margin-top: 26px;
+}
+
+.eqo-vision .eqo-table {
+    font-size: 17px;
+}
+
+.eqo-vision .eqo-table th,
+.eqo-vision .eqo-table td {
+    padding: 18px 22px;
+    line-height: 1.9;
+}
+
+.eqo-vision .eqo-table th {
+    font-size: 16px;
+}
+
+.eqo-vision .eqo-roots {
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 2;
+    max-width: 46em;
+    color: #43536b;
+}
+
 /* ---------- Cards grid ---------- */
 .eqo-grid {
     display: grid;
@@ -707,6 +833,46 @@
     .eqo-subhead {
         font-size: 20px;
         margin-top: 36px;
+    }
+}
+
+@media (max-width: 820px) {
+    .eqo-vision .eqo-vm-box {
+        padding: 26px 22px;
+    }
+
+    .eqo-vision .eqo-vm-box h3 {
+        font-size: 22px;
+    }
+
+    .eqo-vision .eqo-vm-box p {
+        font-size: 18px;
+    }
+
+    .eqo-vision .eqo-vm-box small {
+        font-size: 16px;
+    }
+
+    .eqo-vision .eqo-subhead {
+        font-size: 22px;
+        margin-top: 42px;
+    }
+
+    .eqo-vision .eqo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eqo-vision .eqo-card h3 {
+        font-size: 18px;
+    }
+
+    .eqo-vision .eqo-list li,
+    .eqo-vision .eqo-sub {
+        font-size: 17px;
+    }
+
+    .eqo-vision .eqo-table {
+        font-size: 16px;
     }
 }
 

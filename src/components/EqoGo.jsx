@@ -73,7 +73,7 @@ const EqoGo = () => {
             </section>
 
             {/* Vision & Mission */}
-            <section className="eqo-section eqo-alt">
+            <section className="eqo-section eqo-alt eqo-vision">
                 <div className="eqo-wrap">
                     <h2>{c.vision.title}</h2>
                     <div className="eqo-vm">
