@@ -25,7 +25,7 @@
     background: var(--eqo-bg);
     color: var(--eqo-ink);
     min-height: 100vh;
-    padding-top: 120px;
+    padding-top: 112px;
     overflow-x: hidden;
 }
 
@@ -73,7 +73,7 @@
 
 /* ---------- Hero ---------- */
 .eqo-hero {
-    padding: 20px 0 52px;
+    padding: 0 0 52px;
 }
 
 .eqo-hero-grid {
@@ -815,7 +815,7 @@
     }
 
     .eqo-hero {
-        padding: 12px 0 32px;
+        padding: 0 0 32px;
     }
 
     .eqo-shot img {
