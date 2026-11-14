@@ -182,9 +182,9 @@ export const eqoContent = {
       title: 'شركاؤنا',
       sub: 'شركاء تقنيون وتنظيميون تقوم عليهم المنصة، ومساحة لشركائنا التجاريين.',
       cards: [
-        { title: 'الدفع', text: 'CliQ والتحويل البنكي وبطاقات فيزا وماستركارد وApple Pay وGoogle Pay عبر بوابات دفع معتمدة.' },
-        { title: 'الخرائط والتوجيه', text: 'Mapbox للعرض والبحث، وخوادم OSRM لحساب المسار ووقت الوصول.' },
-        { title: 'الإشعارات والاتصال', text: 'Firebase للإشعارات الفورية، ومزودو الرسائل النصية SMS.' },
+        { title: 'الدفع', text: 'CliQ والتحويل البنكي وبطاقات فيزا وماستركارد وApple Pay وGoogle Pay عبر بوابات دفع معتمدة.', logos: ['cliq', 'visa', 'mastercard', 'applepay', 'googlepay'] },
+        { title: 'الخرائط والتوجيه', text: 'Mapbox للعرض والبحث، وخوادم OSRM لحساب المسار ووقت الوصول.', logos: ['mapbox', 'osrm'] },
+        { title: 'الإشعارات والاتصال', text: 'Firebase للإشعارات الفورية، ومزودو الرسائل النصية SMS.', logos: ['firebase'] },
         { title: 'الجهات التنظيمية', text: 'هيئة تنظيم النقل البري، ونظام الفوترة الوطني الإلكتروني (دائرة ضريبة الدخل والمبيعات).' },
         { title: 'مراكز الرعاية الصحية', text: 'بوابة للمنشآت الصحية المتعاقدة لحجز رحلات مرضاها.' },
         { title: 'الشركات والمؤسسات', text: 'جامعات وفنادق وشركات ومطارات بحسابات مؤسسية، ونقاط التقاط مميزة.' }
@@ -192,9 +192,9 @@ export const eqoContent = {
       commercialTitle: 'شركاؤنا التجاريون',
       commercialRole: 'شريك تجاري',
       commercial: [
-        { initial: 'M', name: 'مونتي باي' },
-        { initial: 'U', name: 'يو واليت' },
-        { initial: 'C', name: 'CSC Bound' }
+        { name: 'مونتي باي', logo: 'montypay' },
+        { name: 'يو واليت', logo: 'uwallet' },
+        { name: 'سي إس سي بيوند', logo: 'csc', round: true }
       ]
     },
     team: {
@@ -424,9 +424,9 @@ export const eqoContent = {
       title: 'Our Partners',
       sub: 'The technology and regulatory partners behind the platform, plus a space for our commercial partners.',
       cards: [
-        { title: 'Payments', text: 'CliQ, bank transfer, Visa and Mastercard, Apple Pay, and Google Pay through certified payment gateways.' },
-        { title: 'Maps & routing', text: 'Mapbox for display and search, and OSRM servers for routing and ETA.' },
-        { title: 'Notifications & communication', text: 'Firebase for push notifications, plus SMS providers.' },
+        { title: 'Payments', text: 'CliQ, bank transfer, Visa and Mastercard, Apple Pay, and Google Pay through certified payment gateways.', logos: ['cliq', 'visa', 'mastercard', 'applepay', 'googlepay'] },
+        { title: 'Maps & routing', text: 'Mapbox for display and search, and OSRM servers for routing and ETA.', logos: ['mapbox', 'osrm'] },
+        { title: 'Notifications & communication', text: 'Firebase for push notifications, plus SMS providers.', logos: ['firebase'] },
         { title: 'Regulators', text: 'The Land Transport Regulatory Commission and the national e-invoicing system (Income and Sales Tax Department).' },
         { title: 'Healthcare centers', text: 'A portal for contracted health facilities to book rides for their patients.' },
         { title: 'Companies & institutions', text: 'Universities, hotels, companies, and airports with institutional accounts and premium pickup points.' }
@@ -434,9 +434,9 @@ export const eqoContent = {
       commercialTitle: 'Our Commercial Partners',
       commercialRole: 'Commercial partner',
       commercial: [
-        { initial: 'M', name: 'Monty Pay' },
-        { initial: 'U', name: 'U Wallet' },
-        { initial: 'C', name: 'CSC Bound' }
+        { name: 'MontyPay', logo: 'montypay' },
+        { name: 'uWallet', logo: 'uwallet' },
+        { name: 'CSC Beyond', logo: 'csc', round: true }
       ]
     },
     team: {

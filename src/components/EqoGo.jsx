@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { eqoContent } from '../context/eqoContent';
+import { partnerLogos, partnerLogoAlt } from '../context/partnerLogos';
 import heroImg from '../assets/eqo-go-app-1.jpg';
 import driverImg from '../assets/eqo-go-app-2.jpg';
 import '../styles/EqoGo.css';
@@ -273,6 +274,17 @@ const EqoGo = () => {
                             <div key={card.title} className="eqo-card eqo-card-primary">
                                 <h3>{card.title}</h3>
                                 <p>{card.text}</p>
+                                {card.logos ? (
+                                    <div className="eqo-card-logos">
+                                        {card.logos.map((key) => (
+                                            <img
+                                                key={key}
+                                                src={partnerLogos[key]}
+                                                alt={partnerLogoAlt[key]}
+                                            />
+                                        ))}
+                                    </div>
+                                ) : null}
                             </div>
                         ))}
                     </div>
@@ -280,8 +292,14 @@ const EqoGo = () => {
                     <h3 className="eqo-subhead">{c.partners.commercialTitle}</h3>
                     <div className="eqo-logos">
                         {c.partners.commercial.map((partner) => (
-                            <div key={partner.name} className="eqo-placeholder">
-                                <span className="eqo-avatar">{partner.initial}</span>
+                            <div key={partner.name} className="eqo-partner-card">
+                                <div className="eqo-partner-mark">
+                                    <img
+                                        src={partnerLogos[partner.logo]}
+                                        alt={partnerLogoAlt[partner.logo]}
+                                        className={partner.round ? 'eqo-logo-round' : undefined}
+                                    />
+                                </div>
                                 <h3>{partner.name}</h3>
                                 <p>{c.partners.commercialRole}</p>
                             </div>

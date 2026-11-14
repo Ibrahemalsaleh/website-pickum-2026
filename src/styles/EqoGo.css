@@ -713,6 +713,67 @@
     color: var(--eqo-mut);
 }
 
+/* ---------- Partner logos ---------- */
+.eqo-card-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 18px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--eqo-line);
+}
+
+.eqo-card-logos img {
+    height: 20px;
+    width: auto;
+    max-width: 80px;
+    object-fit: contain;
+}
+
+.eqo-partner-card {
+    border: 1px solid var(--eqo-line);
+    border-radius: 14px;
+    padding: 22px 16px 18px;
+    text-align: center;
+    background: var(--eqo-surf);
+    box-shadow: var(--eqo-shadow);
+}
+
+.eqo-section.eqo-alt .eqo-partner-card {
+    background: var(--eqo-bg);
+}
+
+.eqo-partner-mark {
+    height: 54px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+}
+
+.eqo-partner-mark img {
+    max-height: 40px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.eqo-partner-mark img.eqo-logo-round {
+    max-height: 46px;
+    max-width: 46px;
+    border-radius: 50%;
+}
+
+.eqo-partner-card h3 {
+    font-size: 17px;
+    color: var(--eqo-ink);
+}
+
+.eqo-partner-card p {
+    font-size: 14.5px;
+    margin-top: 3px;
+    color: var(--eqo-mut);
+}
+
 .eqo-member-name {
     white-space: pre-line;
     line-height: 1.5;
