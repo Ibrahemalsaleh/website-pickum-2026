@@ -287,12 +287,6 @@ const EqoGo = () => {
                             </div>
                         ))}
                     </div>
-
-                    <div className="eqo-stack">
-                        {c.partners.stack.map((tech, index) => (
-                            <span key={tech} className={index < 2 ? 'eqo-stack-key' : ''}>{tech}</span>
-                        ))}
-                    </div>
                 </div>
             </section>
 

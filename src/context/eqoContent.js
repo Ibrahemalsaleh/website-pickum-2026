@@ -195,8 +195,7 @@ export const eqoContent = {
         { initial: 'M', name: 'مونتي باي' },
         { initial: 'U', name: 'يو واليت' },
         { initial: 'C', name: 'CSC Bound' }
-      ],
-      stack: ['React Native', 'React', 'Laravel', 'Go', 'Python', 'Redis', 'NATS JetStream']
+      ]
     },
     team: {
       title: 'فريقنا المميز',
@@ -437,8 +436,7 @@ export const eqoContent = {
         { initial: 'M', name: 'Monty Pay' },
         { initial: 'U', name: 'U Wallet' },
         { initial: 'C', name: 'CSC Bound' }
-      ],
-      stack: ['React Native', 'React', 'Laravel', 'Go', 'Python', 'Redis', 'NATS JetStream']
+      ]
     },
     team: {
       title: 'Our Team',
